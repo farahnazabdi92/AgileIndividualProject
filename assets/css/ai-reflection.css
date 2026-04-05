@@ -1,0 +1,30 @@
+.reflection-block {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.reflection-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.reflection-grid h4 {
+  margin: 0 0 var(--space-1);
+}
+
+.reflection-note {
+  font-weight: 600;
+  color: var(--color-accent-strong);
+  margin-top: var(--space-2);
+}
+
+.reflection-risk {
+  margin-top: var(--space-2);
+  color: #7a3a2a;
+}
+
+@media (min-width: 800px) {
+  .reflection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,115 @@
+.objectives-list {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.25rem;
+  color: var(--color-ink);
+}
+
+.objectives-list li {
+  margin-bottom: 0.4rem;
+}
+
+.content-block {
+  margin-top: var(--space-3);
+}
+
+.code-block {
+  margin: var(--space-2) 0 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: #0f1c24;
+  color: #f4f8fb;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+.code-block code {
+  font-family: "Source Code Pro", Consolas, "Courier New", monospace;
+}
+
+.caption {
+  margin-top: var(--space-2);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.mini-recap {
+  margin-top: var(--space-2);
+  font-weight: 600;
+  color: var(--color-accent-strong);
+}
+
+.demo-area {
+  margin-top: var(--space-3);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.demo-card {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: #fefcf8;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.demo-card ul {
+  margin: var(--space-2) 0;
+  padding-left: 1.25rem;
+}
+
+.demo-status {
+  font-weight: 600;
+  color: var(--color-accent-strong);
+  margin-top: var(--space-2);
+}
+
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.demo-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.demo-btn:hover,
+.demo-btn:focus {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.demo-btn.is-active {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent-strong);
+}
+
+.demo-style-default {
+  background: #fefcf8;
+  border-color: #e1d9cc;
+}
+
+.demo-style-warm {
+  background: #fff3e6;
+  border-color: #f0c39a;
+  box-shadow: 0 12px 24px rgba(194, 139, 60, 0.18);
+}
+
+.demo-style-cool {
+  background: #eaf2f9;
+  border-color: #90b4d6;
+  box-shadow: 0 12px 24px rgba(70, 120, 170, 0.18);
+}
+
+.demo-style-bold {
+  background: #e9f6f0;
+  border-color: #6fb89c;
+  box-shadow: 0 12px 24px rgba(30, 111, 92, 0.18);
+}

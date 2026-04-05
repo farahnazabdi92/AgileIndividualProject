@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz | SkillTrack Learning Portfolio</title>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/quiz.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/quiz.js" defer></script>
+  </head>
+  <body data-page="quiz">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <a class="brand-title" href="tutorial.html">SkillTrack Learning Portfolio</a>
+          <p class="brand-tagline">Learn, demonstrate, and reflect on web fundamentals.</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="tutorial.html" data-page="tutorial">Tutorial</a>
+          <a class="nav-link" href="quiz.html" data-page="quiz">Quiz</a>
+          <a class="nav-link" href="ai-reflection.html" data-page="ai-reflection">AI Reflection</a>
+          <a class="nav-link" href="cv.html" data-page="cv">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <div class="container">
+        <header class="page-header">
+          <h1 class="page-title">Quiz</h1>
+          <p class="page-lede">
+            This assessment checks understanding of the tutorial fundamentals and records your progress.
+          </p>
+        </header>
+
+        <section class="section" id="quiz-intro">
+          <h2>Quiz Instructions</h2>
+          <p>
+            Answer all questions to check your understanding of HTML, CSS, and JavaScript fundamentals.
+            Questions are drawn from the tutorial and are presented in a random order each time.
+          </p>
+          <ul class="quiz-instructions">
+            <li>Select one answer per question.</li>
+            <li>You can change answers before submitting.</li>
+            <li>The quiz will warn you if you try to leave after starting.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="quiz-pass-threshold">
+          <h2>Pass Threshold</h2>
+          <p>
+            To pass you need at least <strong><span id="pass-threshold">70%</span></strong>.
+          </p>
+        </section>
+
+        <form id="quiz-form" novalidate>
+          <section class="section" id="quiz-questions">
+            <h2>Questions</h2>
+            <div id="question-container" class="question-list" aria-live="polite">
+              <p class="system-message">Loading questions...</p>
+            </div>
+          </section>
+
+          <section class="section" id="quiz-validation">
+            <h2>Validation Feedback</h2>
+            <div id="validation-messages" class="validation-message is-hidden" aria-live="polite">
+              <p>Answer every question before submitting.</p>
+            </div>
+          </section>
+
+          <section class="section" id="quiz-controls">
+            <h2>Submission Controls</h2>
+            <div class="controls-row">
+              <button class="cta" id="submit-quiz" type="submit">Submit Quiz</button>
+              <button class="ghost-btn" id="reset-quiz" type="button">Clear Answers</button>
+            </div>
+          </section>
+        </form>
+
+        <section class="section" id="quiz-results">
+          <h2>Results Summary</h2>
+          <div id="results-content" class="results-box" aria-live="polite">
+            <p class="system-message">Submit the quiz to see your results.</p>
+          </div>
+        </section>
+
+        <section class="section" id="quiz-reward">
+          <h2>Reward Content</h2>
+          <div id="reward-content" class="reward-box" aria-live="polite">
+            <p class="system-message">A reward will appear here if you pass.</p>
+          </div>
+        </section>
+
+        <section class="section" id="quiz-history">
+          <h2>Attempt History</h2>
+          <div class="history-actions">
+            <button class="ghost-btn" id="clear-history" type="button">Clear History</button>
+          </div>
+          <p id="history-notice" class="system-message">No attempts yet.</p>
+          <ul id="history-list" class="history-list"></ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p class="footer-note">
+          SkillTrack Learning Portfolio is a unified learning product. References and source
+          acknowledgements appear on the CV page.
+        </p>
+        <p>Course project scaffold - Phase 12</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Reflection | SkillTrack Learning Portfolio</title>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/ai-reflection.css" />
+    <script src="assets/js/site.js" defer></script>
+  </head>
+  <body data-page="ai-reflection">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <a class="brand-title" href="tutorial.html">SkillTrack Learning Portfolio</a>
+          <p class="brand-tagline">Learn, demonstrate, and reflect on web fundamentals.</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="tutorial.html" data-page="tutorial">Tutorial</a>
+          <a class="nav-link" href="quiz.html" data-page="quiz">Quiz</a>
+          <a class="nav-link" href="ai-reflection.html" data-page="ai-reflection">AI Reflection</a>
+          <a class="nav-link" href="cv.html" data-page="cv">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <div class="container">
+        <header class="page-header">
+          <h1 class="page-title">AI Reflection Log</h1>
+          <p class="page-lede">
+            This page documents AI-assisted work, evaluates reliability, and records corrections.
+          </p>
+        </header>
+
+        <section class="section" id="reflection-intro">
+          <h2>Purpose and Context</h2>
+          <p>
+            This log documents how AI tools were used during the SkillTrack Learning Portfolio project. It
+            focuses on specific prompts, what the AI produced, how the outputs were refined, and where human
+            judgment was required. The goal is to show responsible use, not delegation of understanding.
+          </p>
+          <p class="reflection-note">
+            All AI suggestions were reviewed for accuracy, alignment with the rubric, and explainability in a
+            live demo.
+          </p>
+        </section>
+
+        <section class="section" id="reflection-use-case-1">
+          <h2>AI Use Case 1</h2>
+          <div class="reflection-block">
+            <h3>Use Case: Requirements Mapping and Project Planning</h3>
+            <p>
+              <strong>Prompt focus:</strong> Extract every requirement from the brief and rubric, then create
+              a locked checklist and risk analysis.
+            </p>
+            <div class="reflection-grid">
+              <div>
+                <h4>What the AI produced</h4>
+                <ul class="bullet-list">
+                  <li>Structured requirement lists for each page and feature.</li>
+                  <li>Assessment expectations split by pass vs excellent bands.</li>
+                  <li>A risk-based priority ranking to guide later phases.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>What was changed or refined</h4>
+                <ul class="bullet-list">
+                  <li>Removed any speculative requirements not stated in the brief.</li>
+                  <li>Aligned the checklist order to the final project flow.</li>
+                  <li>Condensed overlapping rubric points to avoid redundancy.</li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              <strong>Why it helped:</strong> The AI accelerated the initial mapping, but manual review was
+              required to ensure accuracy and prevent scope creep.
+            </p>
+            <p class="reflection-risk">
+              <strong>Limitations noted:</strong> Early drafts were overly verbose and included a few inferred
+              requirements that needed removal.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="reflection-use-case-2">
+          <h2>AI Use Case 2</h2>
+          <div class="reflection-block">
+            <h3>Use Case: Tutorial and Quiz Design Planning</h3>
+            <p>
+              <strong>Prompt focus:</strong> Plan the tutorial learning objectives, quiz coverage, and the
+              overall assessment flow without writing final content.
+            </p>
+            <div class="reflection-grid">
+              <div>
+                <h4>What the AI produced</h4>
+                <ul class="bullet-list">
+                  <li>Learning outcomes for HTML, CSS, and JavaScript.</li>
+                  <li>A balanced coverage map for quiz topics.</li>
+                  <li>Suggested structure for the interactive demo and validation rules.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>What was changed or refined</h4>
+                <ul class="bullet-list">
+                  <li>Trimmed advanced topics to stay within scope.</li>
+                  <li>Aligned quiz difficulty to the tutorial depth.</li>
+                  <li>Clarified wording to match the project's instructional tone.</li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              <strong>Why it helped:</strong> The AI helped maintain consistency between the tutorial and quiz
+              so the assessment feels fair and aligned to the learning outcomes.
+            </p>
+            <p class="reflection-risk">
+              <strong>Limitations noted:</strong> Some early suggestions were generic and needed customization
+              to the SkillTrack concept.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="reflection-error-analysis">
+          <h2>Subtle Error Analysis</h2>
+          <div class="reflection-block">
+            <h3>Example: Missing-Question Labels After Randomization</h3>
+            <p>
+              <strong>Issue:</strong> An early AI-generated approach labeled missing questions using the
+              original data order. Because the quiz randomizes question order at runtime, this would have
+              listed incorrect question numbers in validation feedback.
+            </p>
+            <p>
+              <strong>How it was detected:</strong> During manual review, the validation list did not match
+              the on-screen order of randomized questions.
+            </p>
+            <p>
+              <strong>Correction:</strong> The mapping was changed to use the rendered (shuffled) order when
+              numbering missing questions.
+            </p>
+            <p class="reflection-note">
+              <strong>Lesson:</strong> Even small logic choices can cause subtle user-facing errors. AI output
+              must be tested against actual runtime behaviour, not just read for plausibility.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="reflection-evaluation">
+          <h2>Critical Evaluation</h2>
+          <div class="reflection-block">
+            <h3>Reliability, Risk, and Ethics</h3>
+            <ul class="bullet-list">
+              <li>AI can accelerate planning, but it can also introduce scope creep or vague statements.</li>
+              <li>Every AI suggestion must be checked against the rubric to avoid missing requirements.</li>
+              <li>Over-reliance on AI risks producing code the student cannot explain during the demo.</li>
+              <li>Ethical use requires transparency about AI assistance and clear human ownership of work.</li>
+              <li>Verification and testing are essential because AI does not run or validate the project.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="reflection-summary">
+          <h2>Summary and Learnings</h2>
+          <p>
+            AI was most valuable for planning, structuring, and checking alignment with the rubric. Human
+            judgment was still required to adjust scope, correct subtle logic issues, and ensure explainable
+            outcomes. The final responsibility for accuracy, ethics, and demonstration readiness remains with
+            the student.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p class="footer-note">
+          SkillTrack Learning Portfolio is a unified learning product. References and source
+          acknowledgements appear on the CV page.
+        </p>
+        <p>Course project scaffold - Phase 12</p>
+      </div>
+    </footer>
+  </body>
+</html>

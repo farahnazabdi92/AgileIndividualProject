@@ -1,0 +1,125 @@
+.quiz-instructions {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.25rem;
+}
+
+.question-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.question-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  background: #fff;
+}
+
+.question-card.is-missing {
+  border-color: #c4583a;
+  box-shadow: 0 0 0 2px rgba(196, 88, 58, 0.12);
+}
+
+.question-card legend {
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.option-list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.option-label {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.validation-message {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: #f8efe9;
+  border: 1px solid #ead3c7;
+  color: #7a3a2a;
+}
+
+.validation-message.is-hidden {
+  display: none;
+}
+
+.validation-list {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.25rem;
+}
+
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.ghost-btn {
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.results-box,
+.reward-box {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: #f4f6f8;
+  border: 1px solid var(--color-border);
+}
+
+.reward-source {
+  margin-top: var(--space-1);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.result-status {
+  font-weight: 700;
+  margin-top: var(--space-2);
+}
+
+.result-status.pass {
+  color: var(--color-accent-strong);
+}
+
+.result-status.fail {
+  color: #b1462b;
+}
+
+.system-message {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.history-actions {
+  margin-bottom: var(--space-2);
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.history-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  background: #fff;
+}
+
+.history-item strong {
+  display: inline-block;
+  margin-right: var(--space-1);
+}

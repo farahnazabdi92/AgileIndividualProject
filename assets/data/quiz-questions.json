@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "SkillTrack Fundamentals Quiz",
+    "passThreshold": 70,
+    "totalQuestions": 12
+  },
+  "questions": [
+    {
+      "id": "html-1",
+      "topic": "HTML",
+      "question": "What is the primary role of HTML in a web page?",
+      "options": [
+        "To define the visual design and colors",
+        "To provide the structure and meaning of content",
+        "To control user interactions and events",
+        "To store data in the browser"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "html-2",
+      "topic": "HTML",
+      "question": "Which element is most appropriate for a site's main navigation links?",
+      "options": ["<section>", "<nav>", "<article>", "<footer>"],
+      "answerIndex": 1
+    },
+    {
+      "id": "html-3",
+      "topic": "HTML",
+      "question": "Which attribute provides alternative text for an image?",
+      "options": ["title", "alt", "href", "src"],
+      "answerIndex": 1
+    },
+    {
+      "id": "html-4",
+      "topic": "HTML",
+      "question": "Why should heading levels be used in order (h1, h2, h3, ...)?",
+      "options": [
+        "To make the text appear larger",
+        "To create a clear content hierarchy",
+        "To apply automatic styling",
+        "To reduce the HTML file size"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "css-1",
+      "topic": "CSS",
+      "question": "What does the selector .card target?",
+      "options": [
+        "All <card> elements",
+        "Any element with class=\"card\"",
+        "Only the first card in a list",
+        "Elements inside an element named card"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "css-2",
+      "topic": "CSS",
+      "question": "Which property adds space inside the border of an element?",
+      "options": ["margin", "padding", "gap", "outline"],
+      "answerIndex": 1
+    },
+    {
+      "id": "css-3",
+      "topic": "CSS",
+      "question": "Where should most visual styling be defined for a maintainable site?",
+      "options": [
+        "Inline on each HTML element",
+        "Inside the HTML <head> only",
+        "In a separate CSS file",
+        "Within JavaScript strings"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "css-4",
+      "topic": "CSS",
+      "question": "What does margin control in the box model?",
+      "options": [
+        "Space inside the content area",
+        "Space between the content and border",
+        "Space outside the element's border",
+        "The width of the border"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "js-1",
+      "topic": "JavaScript",
+      "question": "What is JavaScript mainly used for on a web page?",
+      "options": [
+        "Defining the content structure",
+        "Controlling presentation and layout",
+        "Adding behaviour and interactivity",
+        "Replacing HTML and CSS entirely"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "js-2",
+      "topic": "JavaScript",
+      "question": "Which code pattern listens for a user action like a click?",
+      "options": [
+        "element.addEventListener(\"click\", handler)",
+        "element.addStyle(\"click\", handler)",
+        "element.onClick = \"handler\"",
+        "element.css(\"click\", handler)"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "js-3",
+      "topic": "JavaScript",
+      "question": "When does JavaScript usually run in an interactive page?",
+      "options": [
+        "Only when the page is first created",
+        "In response to events and user actions",
+        "Only inside CSS files",
+        "After the browser closes"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "js-4",
+      "topic": "JavaScript",
+      "question": "If you want to update text after a button click, which technology do you use?",
+      "options": ["HTML", "CSS", "JavaScript", "Only the browser settings"],
+      "answerIndex": 2
+    }
+  ]
+}
