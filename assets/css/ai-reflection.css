@@ -20,7 +20,7 @@
 
 .reflection-risk {
   margin-top: var(--space-2);
-  color: #7a3a2a;
+  color: var(--color-warning);
 }
 
 @media (min-width: 800px) {

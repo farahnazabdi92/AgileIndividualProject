@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", resizeCanvas, { once: true });
     document.body.appendChild(canvas);
 
-    const colors = ["#1e6f5c", "#c28b3c", "#4f8fb8", "#efc65f"];
+    const colors = ["#b04a7a", "#d28aa8", "#8a2e5f", "#f0b6cb"];
     const rect = resultsSection.getBoundingClientRect();
     const originX = rect.left + rect.width / 2;
     const originY = rect.top + rect.height * 0.2;
