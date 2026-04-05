@@ -5,19 +5,62 @@ document.addEventListener("DOMContentLoaded", () => {
   const rewardBox = document.querySelector("#reward-content");
   const historyList = document.querySelector("#history-list");
   const historyNotice = document.querySelector("#history-notice");
+  const resultsSection = document.querySelector("#quiz-results");
   const submitButton = document.querySelector("#submit-quiz");
   const resetButton = document.querySelector("#reset-quiz");
   const clearHistoryButton = document.querySelector("#clear-history");
   const passThresholdEl = document.querySelector("#pass-threshold");
   const quizForm = document.querySelector("#quiz-form");
 
-  if (!questionContainer || !validationBox || !resultsBox || !rewardBox || !historyList || !quizForm) {
+  if (
+    !questionContainer ||
+    !validationBox ||
+    !resultsBox ||
+    !rewardBox ||
+    !historyList ||
+    !quizForm ||
+    !resultsSection
+  ) {
     return;
   }
 
   const DATA_URL = "assets/data/quiz-questions.json";
   const STORAGE_KEY = "skilltrack.quiz.attempts";
-  const REWARD_URL = "https://api.quotable.io/random?tags=technology";
+  const REWARD_SOURCES = [
+    {
+      name: "Quotable API",
+      url: "https://api.quotable.io/random?tags=technology",
+      parse: (data) => {
+        if (data && typeof data.content === "string") {
+          return {
+            text: data.content,
+            author: typeof data.author === "string" ? data.author : "",
+          };
+        }
+        return null;
+      },
+    },
+    {
+      name: "Type.fit Quotes",
+      url: "https://type.fit/api/quotes",
+      parse: (data) => {
+        if (!Array.isArray(data) || data.length === 0) {
+          return null;
+        }
+        const attempts = Math.min(data.length, 6);
+        for (let i = 0; i < attempts; i += 1) {
+          const candidate = data[Math.floor(Math.random() * data.length)];
+          if (candidate && typeof candidate.text === "string") {
+            return {
+              text: candidate.text,
+              author: typeof candidate.author === "string" ? candidate.author : "",
+            };
+          }
+        }
+        return null;
+      },
+    },
+  ];
 
   let questions = [];
   let passThreshold = 70;
@@ -158,20 +201,108 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const fetchReward = async () => {
     showRewardPlaceholder("Loading reward...");
-    try {
-      const response = await fetch(REWARD_URL, { cache: "no-store" });
-      if (!response.ok) {
-        throw new Error("Reward request failed.");
+    for (const source of REWARD_SOURCES) {
+      try {
+        const response = await fetch(source.url, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("Reward request failed.");
+        }
+        const data = await response.json();
+        const reward = source.parse(data);
+        if (!reward || typeof reward.text !== "string") {
+          throw new Error("Reward data missing.");
+        }
+        const author = reward.author ? `- ${reward.author}` : "";
+        showRewardMessage(`${reward.text} ${author}`.trim(), source.name);
+        return;
+      } catch (error) {
+        // Try the next source.
       }
-      const data = await response.json();
-      if (!data || typeof data.content !== "string") {
-        throw new Error("Reward data missing.");
-      }
-      const author = data.author ? `- ${data.author}` : "Quotable";
-      showRewardMessage(`${data.content} ${author}`, "Quotable API");
-    } catch (error) {
-      showRewardPlaceholder("Reward unavailable right now. Please try again later.");
     }
+    showRewardPlaceholder("Reward unavailable right now. Please try again later.");
+  };
+
+  const scrollToResults = () => {
+    requestAnimationFrame(() => {
+      resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
+  const prefersReducedMotion = () =>
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const createFireworks = () => {
+    if (prefersReducedMotion()) {
+      resultsBox.classList.add("is-celebrate");
+      window.setTimeout(() => resultsBox.classList.remove("is-celebrate"), 900);
+      return;
+    }
+
+    const canvas = document.createElement("canvas");
+    canvas.className = "celebration-canvas";
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      return;
+    }
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas, { once: true });
+    document.body.appendChild(canvas);
+
+    const colors = ["#1e6f5c", "#c28b3c", "#4f8fb8", "#efc65f"];
+    const rect = resultsSection.getBoundingClientRect();
+    const originX = rect.left + rect.width / 2;
+    const originY = rect.top + rect.height * 0.2;
+    const bursts = 3;
+    const particles = [];
+
+    for (let b = 0; b < bursts; b += 1) {
+      const angleOffset = (Math.PI * 2 * b) / bursts;
+      for (let i = 0; i < 26; i += 1) {
+        const angle = angleOffset + (Math.PI * 2 * i) / 26;
+        const speed = 1.2 + Math.random() * 1.6;
+        particles.push({
+          x: originX,
+          y: originY + b * 12,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          alpha: 1,
+          color: colors[i % colors.length],
+        });
+      }
+    }
+
+    let start = null;
+    const duration = 2000;
+
+    const animate = (timestamp) => {
+      if (!start) {
+        start = timestamp;
+      }
+      const elapsed = timestamp - start;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy + 0.3;
+        p.alpha -= 0.006;
+        ctx.globalAlpha = Math.max(p.alpha, 0);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      if (elapsed < duration) {
+        requestAnimationFrame(animate);
+      } else {
+        canvas.remove();
+      }
+    };
+
+    requestAnimationFrame(animate);
   };
 
   const loadHistory = () => {
@@ -284,9 +415,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (passed) {
       fetchReward();
+      createFireworks();
     } else {
       showRewardPlaceholder("Pass the quiz to unlock a reward.");
     }
+
+    scrollToResults();
   };
 
   const handleReset = () => {
