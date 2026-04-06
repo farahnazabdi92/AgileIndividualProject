@@ -117,13 +117,16 @@ document.addEventListener("DOMContentLoaded", () => {
     optionsWrapper.className = "option-list";
 
     question.options.forEach((optionText, optionIndex) => {
-      const label = document.createElement("label");
-      label.className = "option-label";
+      const optionId = `question-${question.id}-option-${optionIndex}`;
+      const optionRow = document.createElement("div");
+      optionRow.className = "form-check option-row";
 
       const input = document.createElement("input");
       input.type = "radio";
       input.name = `question-${question.id}`;
       input.value = optionIndex;
+      input.id = optionId;
+      input.className = "form-check-input";
       input.dataset.questionId = question.id;
       input.dataset.optionIndex = optionIndex.toString();
 
@@ -134,12 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
         fieldset.classList.remove("is-missing");
       });
 
-      const span = document.createElement("span");
-      span.textContent = optionText;
+      const label = document.createElement("label");
+      label.className = "form-check-label";
+      label.setAttribute("for", optionId);
+      label.textContent = optionText;
 
-      label.appendChild(input);
-      label.appendChild(span);
-      optionsWrapper.appendChild(label);
+      optionRow.appendChild(input);
+      optionRow.appendChild(label);
+      optionsWrapper.appendChild(optionRow);
     });
 
     fieldset.appendChild(optionsWrapper);

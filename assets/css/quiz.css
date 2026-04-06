@@ -30,10 +30,26 @@
   gap: var(--space-2);
 }
 
-.option-label {
-  display: flex;
-  gap: 0.6rem;
-  align-items: flex-start;
+.option-row {
+  margin: 0;
+}
+
+.form-check-input {
+  border-color: var(--color-border);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent-strong);
+}
+
+.form-check-input:focus {
+  border-color: var(--color-accent-strong);
+  box-shadow: 0 0 0 0.2rem rgba(176, 74, 122, 0.2);
+}
+
+.form-check-label {
+  color: var(--color-ink);
 }
 
 .validation-message {

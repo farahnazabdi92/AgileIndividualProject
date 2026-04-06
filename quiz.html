@@ -4,10 +4,12 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Quiz | SkillTrack Learning Portfolio</title>
+    <link rel="stylesheet" href="assets/libraries/bootstrap-5.3.8-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/site.css"/>
     <link rel="stylesheet" href="assets/css/quiz.css"/>
     <script src="assets/js/site.js" defer></script>
     <script src="assets/js/quiz.js" defer></script>
+    <script src="assets/libraries/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body data-page="quiz">
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -80,19 +82,26 @@
             </section>
         </form>
 
-        <section class="section" id="quiz-results">
-            <h2>Results Summary</h2>
-            <div id="results-content" class="results-box" aria-live="polite">
-                <p class="system-message">Submit the quiz to see your results.</p>
+        <div class="container p-0">
+            <div class="row g-lg-4">
+                <div class="col-lg-6">
+                    <section class="section " id="quiz-results">
+                        <h2>Results Summary</h2>
+                        <div id="results-content" class="results-box" aria-live="polite">
+                            <p class="system-message">Submit the quiz to see your results.</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-lg-6">
+                    <section class="section" id="quiz-reward">
+                        <h2>Reward Content</h2>
+                        <div id="reward-content" class="reward-box" aria-live="polite">
+                            <p class="system-message">A reward will appear here if you pass.</p>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </section>
-
-        <section class="section" id="quiz-reward">
-            <h2>Reward Content</h2>
-            <div id="reward-content" class="reward-box" aria-live="polite">
-                <p class="system-message">A reward will appear here if you pass.</p>
-            </div>
-        </section>
+        </div>
 
         <section class="section" id="quiz-history">
             <h2>Attempt History</h2>

@@ -4,9 +4,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>CV | SkillTrack Learning Portfolio</title>
+    <link rel="stylesheet" href="assets/libraries/bootstrap-5.3.8-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/site.css"/>
     <link rel="stylesheet" href="assets/css/cv.css"/>
     <script src="assets/js/site.js" defer></script>
+    <script src="assets/libraries/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body data-page="cv">
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -47,9 +49,8 @@
                     <h3 class="cv-name">Farahnaz Abdi</h3>
                     <p class="cv-role">IT Specialist / ICT Analyst</p>
                     <ul class="cv-contact">
-                        <li><strong>Email:</strong> <a
-                                href="mailto:farahnaz.abdi65@gmail.com">farahnaz.abdi65@gmail.com</a></li>
-                        <li><strong>Phone:</strong> <a href="tel:0451080500">0451 080 500</a></li>
+                        <li><strong>Email:</strong> [your.address@gmail.com]</li>
+                        <li><strong>Phone:</strong> [000 000 000]</li>
                         <li><strong>Location:</strong> Perth, Western Australia, Australia</li>
                         <li>
                             <strong>Profile:</strong>
@@ -111,37 +112,37 @@
 
         <section class="section" id="cv-skills">
             <h2>Skills</h2>
-            <div class="cv-skill-grid">
-                <div>
-                    <h3>Programming &amp; Development</h3>
-                    <ul class="cv-skills">
-                        <li>JavaScript, React.js, Python</li>
-                        <li>Java, SQL, SQL Server</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Data &amp; Analytics</h3>
-                    <ul class="cv-skills">
-                        <li>Power BI, reporting, dashboards</li>
-                        <li>Database development and optimization</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Infrastructure &amp; Security</h3>
-                    <ul class="cv-skills">
-                        <li>Linux administration and server operations</li>
-                        <li>F5 BigIP / web application firewalls</li>
-                        <li>Infrastructure, security, and troubleshooting</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Business Platforms</h3>
-                    <ul class="cv-skills">
-                        <li>Dynamics 365</li>
-                        <li>Power Platform</li>
-                    </ul>
-                </div>
+          <div class="row g-3 cv-skill-grid">
+            <div class="col-md-6 col-xl-3">
+              <h3>Programming &amp; Development</h3>
+              <ul class="cv-skills">
+                <li>JavaScript, React.js, Python</li>
+                <li>Java, SQL, SQL Server</li>
+              </ul>
             </div>
+            <div class="col-md-6 col-xl-3">
+              <h3>Data &amp; Analytics</h3>
+              <ul class="cv-skills">
+                <li>Power BI, reporting, dashboards</li>
+                <li>Database development and optimization</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <h3>Infrastructure &amp; Security</h3>
+              <ul class="cv-skills">
+                <li>Linux administration and server operations</li>
+                <li>F5 BigIP / web application firewalls</li>
+                <li>Infrastructure, security, and troubleshooting</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <h3>Business Platforms</h3>
+              <ul class="cv-skills">
+                <li>Dynamics 365</li>
+                <li>Power Platform</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section class="section" id="cv-experience">
@@ -271,8 +272,23 @@
                 <li>Persian - Native/Bilingual</li>
             </ul>
         </section>
-    </div>
-</main>
+
+        <section class="section" id="cv-references">
+          <h2>References</h2>
+          <p>
+            The following sources informed this project. Replace placeholders with full citations following
+            UWA referencing guidance.
+          </p>
+          <ul class="cv-references">
+            <li>University of Western Australia. Referencing guidelines and style guides. [URL]</li>
+            <li>MDN Web Docs. HTML, CSS, and JavaScript reference documentation. [URL]</li>
+            <li>AI assistance (ChatGPT). Used for planning and drafting support. [Access date].</li>
+            <li>Quotable API. Used for quiz reward content on pass. [URL]</li>
+            <li>Type.fit Quotes API. Used as a reward fallback source. [URL]</li>
+          </ul>
+        </section>
+      </div>
+    </main>
 
 <footer class="site-footer">
     <div class="container footer-grid">
