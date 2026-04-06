@@ -23,6 +23,108 @@
     color: var(--color-warning);
 }
 
+.phase-number {
+    font-weight: 700;
+    color: var(--color-accent-strong);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.8rem;
+}
+
+.reflection-accordion {
+    margin-top: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    overflow: hidden;
+}
+
+.reflection-accordion .accordion-item {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    background: transparent;
+}
+
+.reflection-accordion .accordion-item:first-child {
+    border-top: 0;
+}
+
+.reflection-accordion .accordion-header {
+    margin: 0;
+}
+
+.reflection-accordion .accordion-button {
+    background: #fdf0f6;
+    color: var(--color-ink);
+    font-weight: 700;
+    border: 0;
+    box-shadow: none;
+    padding: var(--space-3);
+    border-radius: 0;
+}
+
+.reflection-accordion .accordion-button:not(.collapsed) {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.reflection-accordion .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(176, 74, 122, 0.25);
+}
+
+.reflection-accordion .accordion-body {
+    background: #fffafc;
+    padding: var(--space-3);
+    border-top: 1px solid var(--color-border);
+}
+
+.reflection-accordion .accordion-item:first-child .accordion-button {
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+}
+
+.reflection-accordion .accordion-item:last-child .accordion-button.collapsed {
+    border-bottom-left-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
+}
+
+.reflection-accordion .accordion-item:last-child .accordion-body {
+    border-bottom-left-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
+}
+
+.prompt-panel {
+    display: grid;
+    gap: var(--space-2);
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3);
+}
+
+.prompt-title {
+    font-weight: 700;
+    color: var(--color-accent-strong);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.prompt-panel p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.prompt-panel .bullet-list {
+    margin-top: 0;
+}
+
+.prompt-note {
+    font-weight: 600;
+    color: var(--color-accent-strong);
+}
+
 @media (min-width: 800px) {
     .reflection-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));

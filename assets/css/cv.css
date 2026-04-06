@@ -38,80 +38,32 @@
 }
 
 .cv-entry {
-    margin-top: var(--space-3);
+  margin-top: var(--space-3);
 }
 
-.cv-entry h3 {
-    margin: 0 0 var(--space-1);
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
+.entry-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
-.cv-entry h3::before {
-    content: "";
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    border: 1px solid var(--color-border);
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    flex: 0 0 auto;
+.entry-header h3 {
+  margin: 0;
 }
 
-#cv-experience .cv-entry:nth-of-type(1) h3::before {
-    background-image: url("../images/Illuminance%20Solutions%20Logo.jfif");
+.entry-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  padding: 4px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  box-shadow: 0 6px 12px rgba(176, 74, 122, 0.12);
 }
 
-#cv-experience .cv-entry:nth-of-type(2) h3::before {
-    background-image: url("../images/Moghavasazi%20Shargh%20Logo.jfif");
-}
-
-#cv-experience .cv-entry:nth-of-type(3) h3::before {
-    background-image: url("../images/Central%20Bank%20of%20Iran%20Logo.jfif");
-}
-
-#cv-experience .cv-entry:nth-of-type(4) h3::before {
-    background-image: url("../images/Sunny%20Mehr%20Logo.jfif");
-}
-
-#cv-education .cv-entry:nth-of-type(1) h3::before {
-    background-image: url("../images/University%20of%20Western%20Australia%20Logo.jfif");
-}
-
-#cv-education .cv-entry:nth-of-type(2) h3::before {
-    background-image: url("../images/Islamic%20Azad%20University%20Science%20And%20Research%20Branch%20Logo.jfif");
-}
-
-#cv-education .cv-entry:nth-of-type(3) h3::before {
-    background-image: url("../images/Islamic%20Azad%20University%20Central%20Tehran%20Branch%20Logo.jfif");
-}
-
-#cv-volunteering .cv-entry:nth-of-type(1) h3::before {
-    background-image: url("../images/Girls%20Programming%20Network%20Logo.jfif");
-}
-
-#cv-volunteering .cv-entry:nth-of-type(2) h3::before {
-    background-image: url("../images/Perth%20Global%20AI%20Bootcamp%20Logo.jfif");
-}
-
-#cv-volunteering .cv-entry:nth-of-type(3) h3::before {
-    background-image: url("../images/UWA%20Data%20Institude%20Logo.jfif");
-}
-
-#cv-volunteering .cv-entry:nth-of-type(4) h3::before {
-    background-image: url("../images/DDD%20Perth%20Logo.jfif");
-}
-
-#cv-volunteering .cv-entry:nth-of-type(5) h3::before {
-    background-image: url("../images/UWA%20Student%20Guild%20Logo.jfif");
-}
-
-.cv-entry h3::before {
-    box-shadow: 0 6px 12px rgba(176, 74, 122, 0.12);
-}
 
 .cv-meta {
     margin: 0 0 var(--space-2);

@@ -40,49 +40,50 @@
         <section class="section" id="reflection-intro">
             <h2>Purpose and Context</h2>
             <p>
-                This log documents how AI tools were used during the SkillTrack Learning Portfolio project. It
-                focuses on specific prompts, what the AI produced, how the outputs were refined, and where human
-                judgment was required. The goal is to show responsible use, not delegation of understanding.
+                This log documents the real AI-assisted workflow used in the SkillTrack Learning Portfolio. It
+                distinguishes how ChatGPT and Codex were used, explains the phase-driven approach, and records the
+                review and acceptance checks applied before moving forward. The goal is to show responsible use,
+                not delegation of understanding.
             </p>
             <p class="reflection-note">
-                All AI suggestions were reviewed for accuracy, alignment with the rubric, and explainability in a
-                live demo.
+                All AI outputs were reviewed against the assignment brief and acceptance criteria before being
+                accepted.
             </p>
         </section>
 
         <section class="section" id="reflection-use-case-1">
             <h2>AI Use Case 1</h2>
             <div class="reflection-block">
-                <h3>Use Case: Requirements Mapping and Project Planning</h3>
+                <h3>Use Case: Understanding Context and Requirements with ChatGPT</h3>
                 <p>
-                    <strong>Prompt focus:</strong> Extract every requirement from the brief and rubric, then create
-                    a locked checklist and risk analysis.
+                    <strong>Prompt focus:</strong> Understand the brief and rubric, extract explicit requirements,
+                    and build a checklist to avoid missing marks.
                 </p>
                 <div class="reflection-grid">
                     <div>
                         <h4>What the AI produced</h4>
                         <ul class="bullet-list">
-                            <li>Structured requirement lists for each page and feature.</li>
-                            <li>Assessment expectations split by pass vs excellent bands.</li>
-                            <li>A risk-based priority ranking to guide later phases.</li>
+                            <li>A structured list of requirements for each page and feature.</li>
+                            <li>Rubric expectations grouped into basic vs excellent bands.</li>
+                            <li>Early risk flags on high-impact items like the quiz and demo explainability.</li>
                         </ul>
                     </div>
                     <div>
                         <h4>What was changed or refined</h4>
                         <ul class="bullet-list">
-                            <li>Removed any speculative requirements not stated in the brief.</li>
-                            <li>Aligned the checklist order to the final project flow.</li>
-                            <li>Condensed overlapping rubric points to avoid redundancy.</li>
+                            <li>Removed inferred items that were not explicitly in the brief.</li>
+                            <li>Reordered requirements to match the intended user journey.</li>
+                            <li>Condensed overlap so the checklist stayed practical and usable.</li>
                         </ul>
                     </div>
                 </div>
                 <p>
-                    <strong>Why it helped:</strong> The AI accelerated the initial mapping, but manual review was
-                    required to ensure accuracy and prevent scope creep.
+                    <strong>Why it helped:</strong> It accelerated the initial analysis, but human review was needed
+                    to keep the scope aligned to the brief.
                 </p>
                 <p class="reflection-risk">
-                    <strong>Limitations noted:</strong> Early drafts were overly verbose and included a few inferred
-                    requirements that needed removal.
+                    <strong>Limitations noted:</strong> Early drafts were too broad and needed pruning to avoid
+                    scope creep.
                 </p>
             </div>
         </section>
@@ -90,60 +91,2628 @@
         <section class="section" id="reflection-use-case-2">
             <h2>AI Use Case 2</h2>
             <div class="reflection-block">
-                <h3>Use Case: Tutorial and Quiz Design Planning</h3>
+                <h3>Use Case: Phase Planning and Prompt Design with ChatGPT</h3>
                 <p>
-                    <strong>Prompt focus:</strong> Plan the tutorial learning objectives, quiz coverage, and the
-                    overall assessment flow without writing final content.
+                    <strong>Prompt focus:</strong> Break the project into sequential phases and draft phase-specific
+                    prompts for Codex.
                 </p>
                 <div class="reflection-grid">
                     <div>
                         <h4>What the AI produced</h4>
                         <ul class="bullet-list">
-                            <li>Learning outcomes for HTML, CSS, and JavaScript.</li>
-                            <li>A balanced coverage map for quiz topics.</li>
-                            <li>Suggested structure for the interactive demo and validation rules.</li>
+                            <li>A 12-phase development roadmap aligned to the assignment.</li>
+                            <li>Phase prompts that specified scope and non-negotiable requirements.</li>
+                            <li>Checklists and acceptance criteria for each phase.</li>
                         </ul>
                     </div>
                     <div>
                         <h4>What was changed or refined</h4>
                         <ul class="bullet-list">
-                            <li>Trimmed advanced topics to stay within scope.</li>
-                            <li>Aligned quiz difficulty to the tutorial depth.</li>
-                            <li>Clarified wording to match the project's instructional tone.</li>
+                            <li>Rewrote prompts to remove ambiguity and align with the rubric.</li>
+                            <li>Added explicit "do not implement yet" constraints per phase.</li>
+                            <li>Adjusted the phase order to keep dependencies under control.</li>
                         </ul>
                     </div>
                 </div>
                 <p>
-                    <strong>Why it helped:</strong> The AI helped maintain consistency between the tutorial and quiz
-                    so the assessment feels fair and aligned to the learning outcomes.
+                    <strong>Why it helped:</strong> Phase planning reduced complexity and made each step verifiable
+                    before moving forward.
                 </p>
                 <p class="reflection-risk">
-                    <strong>Limitations noted:</strong> Some early suggestions were generic and needed customization
-                    to the SkillTrack concept.
+                    <strong>Limitations noted:</strong> Some prompts were too generic and required manual tightening
+                    to match the assignment scope.
                 </p>
             </div>
         </section>
 
-        <section class="section" id="reflection-error-analysis">
-            <h2>Subtle Error Analysis</h2>
+        <section class="section" id="reflection-use-case-3">
+            <h2>AI Use Case 3</h2>
             <div class="reflection-block">
-                <h3>Example: Missing-Question Labels After Randomization</h3>
+                <h3>Use Case: Phase-by-Phase Implementation with Codex</h3>
                 <p>
-                    <strong>Issue:</strong> An early AI-generated approach labeled missing questions using the
-                    original data order. Because the quiz randomizes question order at runtime, this would have
-                    listed incorrect question numbers in validation feedback.
+                    <strong>Prompt focus:</strong> Implement each phase in the repository, then review and correct
+                    the output before moving on.
+                </p>
+                <div class="reflection-grid">
+                    <div>
+                        <h4>What the AI produced</h4>
+                        <ul class="bullet-list">
+                            <li>Shared UI shell, page scaffolds, and consistent navigation.</li>
+                            <li>Tutorial content, quiz rendering, and storage logic.</li>
+                            <li>CSS theming updates and responsive layout refinements.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>What was changed or refined</h4>
+                        <ul class="bullet-list">
+                            <li>Adjusted content depth to match rubric expectations.</li>
+                            <li>Refined validation behaviour and reward handling.</li>
+                            <li>Standardized wording and cross-page consistency.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    <strong>Why it helped:</strong> Codex accelerated implementation, but every phase required
+                    manual verification to ensure the work was explainable and compliant.
+                </p>
+                <p class="reflection-risk">
+                    <strong>Limitations noted:</strong> Some implementations looked correct at first glance but still
+                    needed manual review against acceptance criteria.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="reflection-phase-workflow">
+            <h2>12-Phase AI-Assisted Development Workflow</h2>
+            <p>
+                The project was intentionally split into 12 phases so each step could be planned, implemented, and
+                reviewed before moving on. ChatGPT helped structure the phases and refine prompts, while Codex
+                implemented each phase in the repository. This reduced complexity and kept every change aligned
+                with the assignment requirements.
+            </p>
+
+            <div class="accordion reflection-accordion" id="phasePromptAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase1PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse" aria-expanded="false"
+                                aria-controls="phasePromptCollapse">
+                            Phase 1 — Requirement Locking and Assessment Mapping
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse" class="accordion-collapse collapse"
+                         aria-labelledby="phase1PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 1 of this university web application project.
+
+Important:
+This phase is NOT for coding, NOT for modifying files, and NOT for generating implementation steps yet.
+Do not create HTML, CSS, JavaScript, file contents, or starter templates.
+Your only job in this phase is to extract, organize, and lock down the full set of requirements and assessment expectations so nothing important is missed later.
+
+Context:
+You have already been given the full assignment context from the project brief and marking rubric.
+Treat that assignment context as the source of truth.
+Use it carefully and comprehensively.
+
+Your goal:
+Produce a complete requirement analysis document for the project that will guide all future development phases.
+
+What you must do in this phase:
+
+1. Extract every requirement from the brief
+Identify all explicit requirements from the assignment brief, including:
+- required pages
+- required features on each page
+- technical constraints
+- submission constraints
+- styling and coherence expectations
+- browser/testing expectations
+- validation expectations
+- restrictions on frameworks/libraries
+- referencing/source acknowledgement requirements
+- demo expectations
+
+2. Extract every assessment expectation from the rubric
+Identify what the rubric rewards, especially:
+- what is required for a basic pass
+- what is needed for a strong submission
+- what is needed for the Excellent band
+- which small details are easy to miss but affect marks
+- which categories are most heavily weighted
+- which categories are highest risk if ignored
+
+3. Build a “locked requirement checklist”
+Create a master checklist that future phases can follow.
+This checklist must separate:
+- absolute must-have requirements
+- high-mark / excellent-band expectations
+- demo-critical items that the student must be able to explain live
+- quality-control requirements to verify before submission
+
+4. Identify hidden or easily missed constraints
+Call out subtle but important details such as:
+- the project must feel like one coherent product, not separate pages
+- the quiz questions must be loaded dynamically from a local data file
+- quiz questions should not be hard-coded in HTML, and for strongest alignment with the rubric should ideally not be embedded directly in JS either
+- question order must randomize on each load
+- beforeunload warning only applies after the quiz has started and before successful submission
+- the warning must be cleared after successful submission
+- reward content must come from a public API and not be hard-coded
+- localStorage must preserve attempt history and should handle missing/corrupt data safely
+- the CV page must include a references section at the bottom, including AI assistance
+- all code must be clear, commented, and explainable in the demo
+- inability to explain the code can reduce marks even if the app works
+
+5. Prioritize requirements by marks and risk
+Create a section that ranks the project areas by:
+- assessment weight
+- implementation complexity
+- risk of losing marks
+- importance for the demo
+
+You should clearly point out which areas deserve the most attention later.
+For example, the quiz page, tutorial page, code quality, and demo explanation are likely high-priority.
+
+6. Identify dependencies between requirements
+Map which requirements affect later work.
+Examples:
+- site identity affects all four pages
+- quiz data format affects rendering, validation, scoring, and storage
+- AI usage tracking must happen throughout the project, not just at the end
+- references must be collected during development, not only written at the end
+- code structure and naming affect demo explainability
+
+7. Create a “definition of done” for Phase 1
+At the end of your response, define what it means for Phase 1 to be complete.
+This should be a short checkpoint list confirming that the project requirements are fully understood and locked.
+
+Output format:
+Structure your response in clear markdown using these sections:
+
+1. Project Understanding Summary
+2. Full Requirement Extraction from Brief
+3. Full Assessment Extraction from Rubric
+4. Locked Requirement Checklist
+5. Must-Have vs High-Mark Features
+6. Demo-Critical Features to Be Able to Explain
+7. Hidden / Easy-to-Miss Constraints
+8. Priority and Risk Analysis
+9. Requirement Dependencies
+10. Phase 1 Definition of Done
+
+Additional instructions:
+- Be exhaustive, not brief.
+- Be precise and literal where the brief/rubric is explicit.
+- Do not invent new requirements.
+- If you make an inference, label it clearly as “inference” rather than “explicit requirement.”
+- Do not start planning implementation yet.
+- Do not write code.
+- Do not propose file contents.
+- Do not move on to Phase 2.
+- Do not ask me questions unless there is a true ambiguity that prevents requirement locking.
+- Assume the goal is to maximize marks while keeping the project understandable for a live demo.
+
+Quality bar for your answer:
+I want a requirement analysis that is detailed enough that future phases can be executed without re-reading the brief and rubric repeatedly.
+Your output should function as the project’s requirement reference document.
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase2PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse2" aria-expanded="false"
+                                aria-controls="phasePromptCollapse2">
+                            Phase 2 — Product Concept and Site Identity
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse2" class="accordion-collapse collapse"
+                         aria-labelledby="phase2PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 2 of this university web application project.
+
+Important:
+This phase is still NOT for coding, NOT for modifying files, and NOT for generating implementation details.
+Do not create HTML, CSS, JavaScript, mock file contents, starter templates, or page code.
+Do not move into page implementation.
+Your only job in this phase is to define the product concept and site identity so the project feels like one coherent web application rather than four disconnected pages.
+
+Inputs you must use:
+- The assignment brief and marking rubric already provided earlier
+- The Phase 1 requirement analysis / locked requirement checklist you produced
+Treat those as the source of truth.
+This phase must stay fully aligned with the locked requirements from Phase 1.
+
+Main objective of Phase 2:
+Create the conceptual foundation for the whole project by deciding:
+- what kind of product this website is
+- who it feels like it is for
+- how all 4 required pages fit into one product story
+- what the visual and tonal identity should be
+- what kind of navigation and user journey should connect the pages
+- what design direction will help maximize marks while remaining realistic, understandable, and easy to explain in the demo
+
+Important assignment reality:
+The project pages are fixed by the brief:
+1. Tutorial page
+2. Quiz page
+3. AI Reflection Log page
+4. Personalised CV page
+
+So your job is NOT to invent different pages.
+Your job is to create one strong conceptual wrapper that makes those four required pages feel like parts of the same product.
+
+What you must do in this phase:
+
+1. Re-state the design challenge
+Start by clearly explaining the challenge of Phase 2:
+- the project is partly academic and partly personal
+- it includes learning content, a quiz, an AI reflection, and a CV
+- these can easily feel disconnected unless a strong concept ties them together
+- the concept must be credible, polished, and consistent with the brief and rubric
+
+2. Propose multiple concept directions
+Generate 3 distinct concept directions for the site identity.
+These should be realistic, rubric-friendly, and suitable for a student project.
+Each concept direction must explain:
+- concept name / working title
+- short concept summary
+- target audience
+- tone of voice
+- why this concept fits the assignment
+- how it unifies the 4 required pages
+- likely strengths
+- likely risks or weaknesses
+
+The concepts should not be random.
+They must be designed specifically to solve the coherence problem in this assignment.
+
+3. Evaluate each concept against the assignment
+For each concept direction, evaluate how well it supports:
+- a strong tutorial page
+- a strong quiz page
+- a professional AI reflection log
+- a polished CV page
+- coherent navigation and branding
+- good demo explainability
+- realistic implementation using HTML, CSS, JavaScript, and optional Bootstrap/jQuery only
+- the “Excellent” band of the rubric
+
+Be honest if any concept is weaker or harder to execute well.
+
+4. Recommend the best concept
+Choose the single best concept direction and justify the decision clearly.
+Your recommendation should prioritize:
+- coherence across all pages
+- professionalism
+- clarity
+- strong marking potential
+- manageable implementation complexity
+- ease of explaining the final project in a live demo
+
+Do not leave the final answer undecided.
+Make a recommendation.
+
+5. Build a locked site identity brief for the recommended concept
+After choosing the best concept, create a detailed site identity brief that future phases will follow.
+This must include:
+
+A. Product identity
+- final recommended site/app name
+- tagline
+- short value proposition
+- one-paragraph product description
+
+B. Purpose and positioning
+- what the website is “presented as”
+- what role the tutorial, quiz, reflection page, and CV page play in that product
+- how the product balances educational, academic, and professional goals
+
+C. Target audience
+- primary audience
+- secondary audience if relevant
+- what they expect from the site
+- what design style best fits them
+
+D. Tone and writing style
+- overall tone
+- how headings, buttons, instructions, and page text should sound
+- how formal or friendly the writing should be
+- how the tone should change slightly across tutorial, quiz, reflection, and CV pages while still feeling consistent
+
+E. Visual identity direction
+Define the visual direction conceptually, not as code.
+Include:
+- visual personality keywords
+- layout character
+- design mood
+- level of formality
+- preferred use of whitespace
+- desired visual hierarchy
+- image/illustration style if any
+- whether the design should feel modern, academic, professional, playful, minimal, etc.
+- how custom CSS should help the project stand out beyond default Bootstrap
+
+F. Brand consistency rules
+Create rules that all future pages should follow, such as:
+- consistent naming style for headings
+- repeated UI patterns
+- consistency in button treatment and cards/sections
+- consistency in spacing and content rhythm
+- consistent visual identity across all four pages
+
+G. Navigation concept
+Define:
+- top-level navigation labels
+- preferred order of pages
+- expected user journey through the site
+- how the site should guide the user naturally from learning to quiz to reflection to CV
+- whether navigation should feel linear, hub-based, or hybrid
+- how to keep the required quiz link prominent without making the rest of the site feel disconnected
+
+H. Page-role mapping
+For each of the 4 required pages, explain:
+- its role in the product
+- what it contributes to the overall experience
+- what emotional/functional purpose it serves
+- how it should visually and tonally relate to the other pages
+
+I. Interaction philosophy
+Define the overall interaction style:
+- how interactive the product should feel
+- whether interactions should feel playful, polished, minimal, or instructional
+- what kind of interactivity best suits the assignment and the demo
+- how to balance “interesting” features with code clarity and explainability
+
+J. Content strategy at a high level
+Without writing actual content, define:
+- how deep the tutorial should feel
+- how challenging the quiz should feel
+- how reflective and critical the AI log should feel
+- how professional and polished the CV page should feel
+
+6. Identify concept-level decisions that future phases must inherit
+Create a section called “Locked decisions for future phases”.
+This section should state the concept decisions that should remain stable later, for example:
+- final app identity
+- tone
+- visual direction
+- navigation model
+- coherence strategy
+- page relationship logic
+
+These decisions should guide future planning and development.
+
+7. Identify concept risks early
+Create a section listing concept-level risks, such as:
+- a concept becoming too childish for the CV page
+- a concept becoming too formal and making the tutorial less engaging
+- a concept being visually impressive but too hard to implement
+- a concept making the AI reflection page feel bolted on
+- a concept weakening demo explainability
+
+For each risk, explain how to avoid it in later phases.
+
+8. Create a Phase 2 decision summary
+End with a short summary that future phases can use as a reference.
+This should capture the final recommended concept in a compact and reusable format.
+
+Output format:
+Structure your response in clear markdown using these sections:
+
+1. Phase 2 Goal and Design Challenge
+2. Concept Direction 1
+3. Concept Direction 2
+4. Concept Direction 3
+5. Comparative Evaluation of the 3 Concepts
+6. Recommended Concept and Justification
+7. Locked Site Identity Brief
+8. Locked Decisions for Future Phases
+9. Concept Risks and Mitigations
+10. Phase 2 Decision Summary
+11. Phase 2 Definition of Done
+
+Additional instructions:
+- Be comprehensive and thoughtful, not brief.
+- Do not code.
+- Do not generate implementation steps yet.
+- Do not produce wireframes or file structures.
+- Do not move into page content writing.
+- Do not invent requirements outside the brief/rubric.
+- Where useful, explicitly connect your recommendation back to the locked requirements from Phase 1.
+- Optimize for a concept that is coherent, professional, rubric-friendly, and realistic for later implementation.
+- The final recommendation should be something a master’s IT student can confidently develop and explain in a live demo.
+
+Definition of success for this phase:
+By the end of your answer, the project should have one clear recommended concept and one locked site identity strong enough that Phase 3 can build the information architecture around it without uncertainty.
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase3PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse3" aria-expanded="false"
+                                aria-controls="phasePromptCollapse3">
+                            Phase 3 — Information Architecture and Project Structure
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse3" class="accordion-collapse collapse"
+                         aria-labelledby="phase3PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 3 of this university web application project.
+
+Important:
+This phase is still NOT for coding, NOT for modifying files, and NOT for generating final page content.
+Do not create HTML, CSS, JavaScript, templates, starter code, or finished file contents.
+Do not move into implementation yet.
+Your only job in this phase is to design the project’s information architecture, structural blueprint, and development-ready organization so future phases can build cleanly and coherently.
+
+Inputs you must use:
+- The original assignment brief and marking rubric already provided earlier
+- The locked requirement analysis from Phase 1
+- The Phase 2 concept and site identity decision
+
+The Phase 2 concept is now locked and must guide this phase:
+- Site/app identity: SkillTrack Learning Portfolio
+- Tagline: “Learn, demonstrate, and reflect on web fundamentals.”
+- Product framing: a coherent academic-professional learning portfolio
+- Locked page flow: Tutorial → Quiz → AI Reflection → CV
+- Tone: clear, professional, supportive, instructional
+- Visual direction: clean, structured, modern-academic
+- Navigation model: hybrid top navigation plus a strong Tutorial-to-Quiz progression
+- Coherence strategy: all 4 pages must feel like parts of one product, not separate submissions
+
+You must fully inherit those Phase 2 decisions.
+Do not replace them with a new concept.
+
+Main objective of Phase 3:
+Define the site structure, page architecture, content hierarchy, navigation architecture, and project organization required to build the product cleanly in later phases.
+
+This phase should answer questions like:
+- What is the structural blueprint of the app?
+- What sections should each page contain at a high level?
+- How should users move through the product?
+- What shared elements should exist across pages?
+- What files and folders will likely be needed later?
+- How should CSS, JavaScript, data, images, and references be organized?
+- What structural decisions will make later implementation easier, cleaner, and more explainable in the demo?
+
+Important:
+This is architecture and planning, not coding.
+You may propose structure, hierarchy, component ideas, file organization, and page sections, but do not write actual implementation code.
+
+What you must do in this phase:
+
+1. Re-state the structural challenge
+Start by explaining the challenge of Phase 3:
+- The project has fixed pages and fixed rubric requirements
+- It must feel coherent
+- It must remain easy to build and easy to explain
+- It must support dynamic quiz logic, references, AI reflection evidence, and a professional CV
+- The structure must support both marks and demo explainability
+
+2. Define the overall site architecture
+Create a top-level structural model of the website.
+This should include:
+- the 4 required pages
+- their order in the navigation
+- their relationship to each other
+- whether the product is primarily linear, hub-based, or hybrid
+- the role of shared global elements such as header, navigation, footer, and repeated section patterns
+
+Be explicit about how the architecture supports the SkillTrack Learning Portfolio concept.
+
+3. Design the user journey and navigation flow
+Create a high-level navigation and journey model.
+Include:
+- expected primary user path
+- alternate navigation paths
+- how users can move between pages
+- how the Tutorial page should lead naturally into the Quiz page
+- how the AI Reflection and CV pages remain accessible without breaking coherence
+- what the global navigation should contain
+- what secondary navigation or in-page navigation may be useful
+- how to preserve strong “information scent” in labels so navigation stays clear and understandable
+
+Important:
+Navigation labels should be descriptive and aligned with the locked tone and product identity.
+Do not use vague or decorative labels.
+
+4. Create page-level information architecture for each page
+For each of the 4 required pages, define the high-level section structure.
+Do not write the final content. Instead, define the information hierarchy and section blueprint.
+
+For each page, include:
+- page purpose
+- page role in the overall product
+- primary user goal on the page
+- secondary user goals
+- recommended section order
+- what information or functionality belongs in each section
+- any key calls-to-action
+- what should be shared/repeated from the rest of the site
+- what must be unique to this page
+
+You must do this separately for:
+A. Tutorial page
+B. Quiz page
+C. AI Reflection Log page
+D. CV page
+
+5. Go deeper on the Tutorial page structure
+Since the Tutorial page is one of the highest-value pages, define its internal architecture carefully.
+At a high level, decide:
+- how HTML, CSS, and JavaScript should be grouped
+- what sequence makes learning most logical
+- where code examples/snippets belong conceptually
+- where interactive demonstrations should sit conceptually
+- how signposting should work
+- where the Quiz call-to-action should appear
+- how the structure can feel educational and polished
+
+Do not write actual tutorial content.
+Focus only on structure and hierarchy.
+
+6. Go deeper on the Quiz page structure and system architecture
+Since the Quiz page is the most complex feature area, define its architecture in a thorough but still non-code way.
+
+At a high level, specify:
+- the page regions / sections needed
+- where quiz instructions belong
+- where dynamic questions will appear
+- how answer areas should conceptually be organized
+- where validation feedback should appear
+- where score/percentage/pass-fail results should appear
+- where reward content should appear if the user passes
+- where attempt history should appear
+- where controls like submit / reset / clear history should conceptually live if appropriate
+- how the page should stay understandable and not visually cluttered
+
+Then define the system-level architecture of the quiz:
+- quiz data source concept
+- rendering layer concept
+- answer state concept
+- validation layer concept
+- scoring/result layer concept
+- reward/API layer concept
+- storage/history layer concept
+- warning/dirty-state concept for beforeunload
+- error/edge-case handling zones conceptually
+
+Do not implement the logic.
+Just define the architecture clearly enough that later phases can build it.
+
+7. Design the AI Reflection Log page architecture
+Define a structure that supports rubric expectations strongly.
+At a high level, determine:
+- how prompts, AI outputs, corrections, limitations, and critical evaluation should be organized
+- how the page can feel analytical and evidence-based
+- how the page should balance academic honesty, reflective writing, and structure
+- how this page stays visually consistent with the rest of the product
+
+Do not write the reflection content yet.
+Focus on structure only.
+
+8. Design the CV page architecture
+Define the structure of the professional CV page.
+Include:
+- how biography and CV information should be organized
+- what standard CV sections should exist
+- where the profile image should conceptually sit
+- how interactive or enhanced elements could fit without harming professionalism
+- where the references section must appear
+- how the page should stay consistent with the site while still feeling employer-facing
+
+Do not write the biography yet.
+Focus on structure only.
+
+9. Define shared design and content patterns
+Create a section for shared patterns across the whole site.
+This should include:
+- repeated page layout pattern
+- repeated section structure patterns
+- heading hierarchy approach
+- CTA treatment strategy
+- content rhythm
+- card/section usage strategy
+- how consistency will be maintained across all pages
+- how the site can feel distinctive beyond default Bootstrap even before implementation details are chosen
+
+10. Propose a project file/folder architecture
+Now create a recommended project structure for later development.
+This is not implementation code — it is an organizational blueprint.
+
+You should propose:
+- top-level project folders
+- where HTML files should live
+- where CSS files should live
+- where JavaScript files should live
+- where quiz data files should live
+- where images/assets should live
+- where AI reflection records / notes might be tracked conceptually during development
+- where reference/source notes might be tracked conceptually
+- whether JS should be separated into shared vs page-specific files
+- whether CSS should be separated into shared vs page-specific files
+- how to keep the project clean, understandable, and demo-friendly
+
+Important:
+The structure must stay compatible with the assignment submission format:
+- single zipped folder
+- relative links
+- no front-end frameworks
+- sensible organization
+- easy to explain in a demo
+
+11. Define a component / module responsibility map
+Without coding, define which structural responsibilities belong where.
+For example:
+- what should be global/shared across the site
+- what should belong only to the Tutorial page
+- what should belong only to the Quiz page
+- what should be reusable concepts
+- what should remain page-specific to avoid over-engineering
+
+This should help prevent messy future implementation.
+
+12. Identify architecture decisions that reduce risk later
+Create a section that explains which architecture choices will help later with:
+- rubric alignment
+- code readability
+- validation
+- responsiveness
+- browser testing
+- clear navigation
+- demo explainability
+- keeping the quiz logic manageable
+- keeping references and AI evidence organized throughout development
+
+13. Identify architecture risks and mitigations
+List structural risks such as:
+- overcomplicating the file structure
+- making the navigation too shallow or too cluttered
+- treating the pages as isolated instead of connected
+- making the quiz page too crowded
+- burying references or AI reflection evidence too late in the process
+- creating a structure that is hard to explain live
+- introducing unnecessary abstraction
+
+For each risk, explain how to avoid it.
+
+14. Define what must be locked at the end of Phase 3
+Create a section called “Locked architecture decisions for future phases”.
+This should include the decisions that later phases should inherit and not keep re-debating, such as:
+- page order and navigation model
+- high-level page section structure
+- shared layout decisions
+- file/folder structure
+- shared vs page-specific asset strategy
+- core quiz architecture zones
+- placement logic for references and reflection evidence
+- structural coherence strategy
+
+15. Create a Phase 3 decision summary
+End with a concise summary that future phases can reference when they begin actual planning and implementation.
+
+Output format:
+Structure your response in clear markdown using these sections:
+
+1. Phase 3 Goal and Structural Challenge
+2. Overall Site Architecture
+3. User Journey and Navigation Flow
+4. Page Architecture — Tutorial
+5. Page Architecture — Quiz
+6. Page Architecture — AI Reflection Log
+7. Page Architecture — CV
+8. Shared Design and Content Patterns
+9. Recommended Project File/Folder Architecture
+10. Component / Module Responsibility Map
+11. Architecture Decisions That Reduce Later Risk
+12. Architecture Risks and Mitigations
+13. Locked Architecture Decisions for Future Phases
+14. Phase 3 Decision Summary
+15. Phase 3 Definition of Done
+
+Additional instructions:
+- Be detailed and practical.
+- Do not code.
+- Do not write final page content.
+- Do not move into visual styling specifics beyond conceptual structure.
+- Do not start implementation steps yet.
+- Where useful, explicitly connect choices back to the locked requirements from Phase 1 and the locked concept from Phase 2.
+- Where you infer a good structural choice, label it clearly as “inference” rather than “explicit requirement.”
+- Optimize for clarity, coherence, clean later implementation, and strong demo explainability.
+
+Useful quality lens for this phase:
+A strong Phase 3 output should let future phases build the site confidently without uncertainty about:
+- page structure
+- navigation
+- hierarchy
+- project organization
+- responsibility boundaries
+- how the four required pages stay unified as one product
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase4PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse4" aria-expanded="false"
+                                aria-controls="phasePromptCollapse4">
+                            Phase 4 — Tutorial Page Planning and Learning Design
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse4" class="accordion-collapse collapse"
+                         aria-labelledby="phase4PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 4 of this university web application project.
+
+Important:
+This phase is still NOT for coding and NOT for modifying files.
+Do not create HTML, CSS, JavaScript, templates, or final tutorial content.
+Do not write the finished lesson text yet.
+Do not write actual code snippets yet.
+Do not move into implementation.
+Your only job in this phase is to fully plan the Tutorial page so later phases can build it cleanly, coherently, and in a way that maximizes marks.
+
+Inputs you must use:
+- The original assignment brief and marking rubric already provided earlier
+- The locked requirement analysis from Phase 1
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+
+The locked context you must inherit:
+- Product identity: SkillTrack Learning Portfolio
+- Tone: clear, professional, supportive, instructional
+- Visual direction: clean, structured, modern-academic
+- Tutorial page role: core learning module of the product
+- Locked tutorial structure from Phase 3: page introduction and learning objectives → HTML fundamentals → CSS fundamentals → JavaScript fundamentals → interactive demonstration section(s) → best-practice rationale → summary and “Ready for the Quiz?” CTA
+- Primary site flow: Tutorial → Quiz → AI Reflection → CV
+
+Do not replace or redesign these locked decisions.
+Build on them.
+
+Main objective of Phase 4:
+Design the Tutorial page as a high-quality learning experience that clearly teaches HTML, CSS, and JavaScript, supports later quiz creation, aligns with the rubric, and fits the SkillTrack Learning Portfolio concept.
+
+This phase should answer questions like:
+- What should the Tutorial page teach?
+- In what order should it teach it?
+- How deep should each topic go?
+- What should be included under HTML, CSS, and JavaScript?
+- What learning objectives should the page support?
+- What kinds of code examples should later be created?
+- What kind of interactive demonstration(s) should later be built?
+- How should the page stay educational, clear, polished, and easy to explain in the demo?
+- How should the tutorial prepare the user for the quiz without becoming too long or too shallow?
+
+Important rubric reality:
+The rubric rewards:
+- coverage of all three topics: HTML, CSS, JavaScript
+- accurate, well-explained content
+- clear structure and logical flow
+- code snippets/examples that illustrate concepts well
+- at least one meaningful interactive demo
+- a clear link/button to the Quiz page
+- depth that goes beyond definitions and explains best practices
+So this phase must optimize the Tutorial page toward those outcomes.
+
+What you must do in this phase:
+
+1. Re-state the purpose of the Tutorial page
+Start by clearly defining:
+- why the Tutorial page exists in this project
+- how it supports the SkillTrack concept
+- how it supports later quiz success
+- how it contributes to marks and demo readiness
+
+2. Define the learning strategy for the page
+Create a tutorial learning design brief.
+Explain:
+- who the assumed learner is
+- what prior knowledge level should be assumed
+- what teaching style best fits the page
+- what balance should exist between explanation, examples, and interactivity
+- how to keep the page approachable but still academically strong
+- how to avoid being too shallow or too overloaded
+
+3. Define the learning outcomes
+Create a set of clear learning outcomes for the Tutorial page.
+These should be phrased as what the user should understand or be able to do after completing the page.
+Include:
+- overall page-level learning outcomes
+- topic-level learning outcomes for HTML
+- topic-level learning outcomes for CSS
+- topic-level learning outcomes for JavaScript
+
+These learning outcomes should later support quiz creation.
+
+4. Plan the overall content structure of the page
+Using the locked architecture from Phase 3, define the full section hierarchy of the Tutorial page.
+Include:
+- page introduction
+- learning objectives area
+- HTML section
+- CSS section
+- JavaScript section
+- interactive demonstration area(s)
+- best-practice rationale section
+- summary section
+- quiz call-to-action section
+
+For each section, explain:
+- its purpose
+- what kind of information belongs there
+- how long/deep it should feel
+- how it connects to the next section
+- what role it plays in the user journey
+
+5. Go deep on the HTML tutorial plan
+Create a structured teaching blueprint for the HTML section.
+At a high level, decide:
+- which HTML fundamentals should be included
+- what order they should be taught in
+- which concepts are essential vs optional
+- what kinds of examples would later illustrate them best
+- what misunderstandings beginners commonly have
+- what best-practice messages belong here
+- what later quiz questions this section should logically prepare for
+
+Do not write the final lesson text.
+Do not write code yet.
+Focus on content planning and hierarchy.
+
+6. Go deep on the CSS tutorial plan
+Create a structured teaching blueprint for the CSS section.
+At a high level, decide:
+- which CSS fundamentals should be included
+- what order they should be taught in
+- which concepts are essential vs optional
+- what kinds of examples would later illustrate them best
+- what misunderstandings beginners commonly have
+- what best-practice messages belong here
+- what later quiz questions this section should logically prepare for
+
+Again, do not write final content or code.
+Focus on planning.
+
+7. Go deep on the JavaScript tutorial plan
+Create a structured teaching blueprint for the JavaScript section.
+At a high level, decide:
+- which JavaScript fundamentals should be included
+- what order they should be taught in
+- which concepts are essential vs optional
+- what kinds of examples would later illustrate them best
+- what misunderstandings beginners commonly have
+- what best-practice messages belong here
+- what later quiz questions this section should logically prepare for
+
+Do not write final content or code.
+Focus on planning.
+
+8. Define the conceptual boundaries of the tutorial
+Create a section called “What the tutorial will cover and what it will not cover.”
+This is important so later phases do not make the page too broad or too advanced.
+Clarify:
+- what is in scope for HTML
+- what is in scope for CSS
+- what is in scope for JavaScript
+- what advanced topics should be excluded
+- how to keep the page focused enough for the assignment and quiz
+
+9. Plan the code example strategy
+Without writing the actual snippets, define the code example plan.
+Include:
+- how many examples each major topic likely needs
+- what each example should accomplish pedagogically
+- which examples should be simple vs comparative
+- how examples should reinforce explanation rather than decorate the page
+- what kinds of annotations/comments will likely be useful later
+- how examples should avoid being trivial while still staying understandable
+
+10. Plan the interactive demonstration strategy
+This is one of the most important parts of the phase.
+
+You must propose multiple candidate interactive demo concepts for the Tutorial page.
+Generate at least 3 realistic demo options that fit the assignment and the locked product identity.
+Each demo option must explain:
+- what the demo teaches
+- which topic(s) it supports (HTML, CSS, JavaScript, or combined)
+- how the interaction would work at a conceptual level
+- why it would be meaningful rather than decorative
+- how easy it would be to implement later
+- how easy it would be to explain in the demo session
+- what risks or weaknesses it has
+
+Then:
+- compare the demo options
+- recommend the best one primary demo
+- optionally recommend one small secondary demo if it adds clear value without creating unnecessary complexity
+
+Do not code the demo.
+Do not describe implementation details beyond concept-level behavior.
+
+11. Define the pedagogy of sequencing and signposting
+Create a section explaining:
+- why the order HTML → CSS → JavaScript is appropriate or whether any sub-ordering refinements are needed
+- how transitions between sections should work
+- how headings/subheadings should help the learner
+- how summaries, mini-recaps, or “why this matters” moments should be placed
+- how the tutorial can feel guided and polished rather than like disconnected notes
+
+12. Define the best-practice rationale section
+The rubric values going beyond definitions.
+Plan a dedicated best-practice rationale section and explain:
+- what kinds of best-practice ideas should be reinforced
+- how those ideas connect to HTML, CSS, and JavaScript
+- how this section should avoid becoming generic
+- how it should help the user see why good structure, clear styling, and clean scripting matter
+
+13. Design the Tutorial-to-Quiz transition
+Plan the end-of-page transition carefully.
+Define:
+- what the closing section should do
+- what tone it should use
+- how the “Ready for the Quiz?” moment should feel
+- how strongly the CTA should stand out
+- what supporting text might conceptually be needed before the CTA
+- how to make the next step feel natural and motivating
+
+Do not write final button text beyond conceptual examples if needed.
+
+14. Map tutorial content to quiz readiness
+Create a structured “Tutorial-to-Quiz readiness map.”
+This should show:
+- which major tutorial concepts should later become quiz-assessable knowledge
+- which concepts are core and must definitely appear in the quiz
+- which concepts are helpful background but may not need direct quiz questions
+- how the tutorial should prepare the learner for success without revealing quiz answers too bluntly
+
+This is still planning only.
+Do not write quiz questions yet.
+
+15. Plan for clarity, accessibility, and responsiveness at a conceptual level
+Without coding, explain how the tutorial should be planned so it later supports:
+- readability
+- accessible structure
+- scannable sections
+- clean visual hierarchy
+- responsive layout
+- non-overwhelming code example presentation
+- easy use by assessors reviewing the page quickly
+
+16. Identify risks in the Tutorial page plan and mitigate them
+List risks such as:
+- too much content
+- too little depth
+- repetitive explanations
+- tutorial sections feeling unbalanced
+- interactive demo being too weak or too complex
+- examples not aligning with the quiz
+- tutorial becoming dry or textbook-like
+- tutorial becoming hard to explain in the demo
+
+For each risk, explain how later phases should avoid it.
+
+17. Lock the Tutorial page planning decisions
+Create a section called “Locked Tutorial Planning Decisions for Future Phases.”
+This should capture the decisions that later phases should inherit and not keep re-debating, such as:
+- learning goals
+- section order
+- scope boundaries
+- example strategy
+- chosen demo direction
+- sequencing/signposting approach
+- best-practice emphasis
+- tutorial-to-quiz transition logic
+
+18. Create a Phase 4 decision summary
+End with a concise summary that future phases can reference when actual implementation begins.
+
+Output format:
+Structure your response in clear markdown using these sections:
+
+1. Phase 4 Goal and Tutorial Page Purpose
+2. Tutorial Learning Strategy
+3. Tutorial Learning Outcomes
+4. Overall Tutorial Page Structure
+5. HTML Section Teaching Blueprint
+6. CSS Section Teaching Blueprint
+7. JavaScript Section Teaching Blueprint
+8. Tutorial Scope Boundaries
+9. Code Example Strategy
+10. Interactive Demonstration Options
+11. Recommended Demo Direction
+12. Sequencing and Signposting Strategy
+13. Best-Practice Rationale Section Plan
+14. Tutorial-to-Quiz Transition Plan
+15. Tutorial-to-Quiz Readiness Map
+16. Clarity, Accessibility, and Responsiveness Considerations
+17. Tutorial Planning Risks and Mitigations
+18. Locked Tutorial Planning Decisions for Future Phases
+19. Phase 4 Decision Summary
+20. Phase 4 Definition of Done
+
+Additional instructions:
+- Be comprehensive and thoughtful.
+- Do not code.
+- Do not write final lesson copy.
+- Do not write final code snippets.
+- Do not move into implementation.
+- Stay aligned with the locked requirements from Phase 1, the locked concept from Phase 2, and the locked architecture from Phase 3.
+- Where you make a planning choice that is not explicitly required by the brief/rubric, label it clearly as “inference.”
+- Optimize for strong rubric performance, clean future implementation, coherent product identity, and easy demo explainability.
+
+Useful quality lens for this phase:
+A strong Phase 4 output should make later development of the Tutorial page feel straightforward because the following are already clear:
+- what the page teaches
+- how it is structured
+- what its learning goals are
+- what examples are needed
+- what demo concept should be built
+- how it prepares the user for the quiz
+- how it fits the overall SkillTrack Learning Portfolio product
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase5PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse5" aria-expanded="false"
+                                aria-controls="phasePromptCollapse5">
+                            Phase 5 — Quiz Page Planning and Quiz System Design
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse5" class="accordion-collapse collapse"
+                         aria-labelledby="phase5PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 5 of this university web application project.
+
+Important:
+This phase is still NOT for coding and NOT for modifying files.
+Do not create HTML, CSS, JavaScript, JSON, templates, starter files, or final quiz content.
+Do not write the actual quiz questions yet.
+Do not write the actual reward API call yet.
+Do not move into implementation.
+Your only job in this phase is to fully plan the Quiz page and the overall quiz system so later phases can build it cleanly, correctly, and in a way that maximizes marks.
+
+Inputs you must use:
+- The original assignment brief and marking rubric already provided earlier
+- The locked requirement analysis from Phase 1
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+- The locked Tutorial page decisions from Phase 4
+
+The locked context you must inherit:
+- Product identity: SkillTrack Learning Portfolio
+- Tone: clear, professional, supportive, instructional
+- Visual direction: clean, structured, modern-academic
+- Locked site flow: Tutorial → Quiz → AI Reflection → CV
+- Locked quiz architecture from Phase 3:
+  - quiz introduction and instructions
+  - dynamic question container
+  - validation feedback zone
+  - submission controls zone
+  - results summary
+  - reward content zone
+  - attempt history zone
+- Locked tutorial decisions from Phase 4:
+  - tutorial covers HTML, CSS, and JavaScript fundamentals only
+  - quiz should assess the tutorial’s core concepts
+  - core assessable concepts include:
+    - roles of HTML, CSS, JS
+    - semantic HTML elements and attributes
+    - selector types and basic CSS properties
+    - JavaScript events and simple DOM interactions
+  - helpful background may appear in the tutorial but does not all need direct assessment
+
+Do not replace these locked decisions.
+Build on them.
+
+Main objective of Phase 5:
+Design the Quiz page and the underlying quiz system at a planning level so future phases can implement:
+- a rubric-aligned dynamic quiz
+- strong validation and result logic
+- public-API reward logic on pass
+- attempt history using localStorage
+- beforeunload warning behavior after quiz start
+- a page experience that is understandable, coherent, and easy to explain in the demo
+
+Important rubric reality:
+The rubric heavily rewards the quiz page.
+This means this phase must plan for:
+- at least 10 questions
+- questions loaded dynamically via AJAX from a local data file
+- questions rendered dynamically, not hard-coded in HTML
+- randomized question order on each load
+- submission validation
+- beforeunload warning after the quiz has started and before successful submission
+- score, percentage, and pass/fail display
+- reward fetched from a public API only on pass
+- localStorage attempt history with previous results displayed
+- strong explainability in the live demo
+
+What you must do in this phase:
+
+1. Re-state the purpose of the Quiz page
+Start by clearly defining:
+- why the Quiz page exists in this project
+- how it supports the SkillTrack concept
+- how it validates the Tutorial page learning outcomes
+- how it contributes to marks and demo readiness
+
+2. Define the quiz experience strategy
+Create a quiz experience design brief.
+Explain:
+- who the assumed user is
+- what emotional experience the quiz should create
+- how formal or friendly the page should feel
+- how the page should balance assessment seriousness with supportive guidance
+- how difficult the quiz should feel relative to the Tutorial page
+- how to keep the experience clear, fair, and not intimidating
+
+3. Define the assessment goals of the quiz
+Create a section that explains:
+- what the quiz is trying to assess
+- what counts as core knowledge vs supporting knowledge
+- how the quiz should reflect the Tutorial page fairly
+- what the learner should prove by completing it successfully
+- what a passing result should conceptually mean in the SkillTrack product
+
+4. Plan the overall quiz page structure
+Using the locked architecture from Phase 3, define the full section hierarchy of the Quiz page.
+Include:
+- introduction and instructions area
+- pass-threshold communication
+- dynamic question region
+- validation feedback region
+- controls region
+- results region
+- reward region
+- attempt history region
+- optional recovery/error messaging zones
+
+For each region, explain:
+- its purpose
+- what belongs there
+- how prominent it should be
+- what the user should do there
+- how it relates to the rest of the page
+- how it supports clarity and demo explainability
+
+5. Define the quiz format and question model
+At a planning level, decide:
+- what question format is most suitable
+- how many answer options each question should likely have
+- whether all questions should use one format for simplicity and fairness
+- what the minimum number of questions should be
+- whether the final count should be exactly 10 or slightly above 10
+- what structure each quiz question should conceptually contain
+
+You must explain and justify these choices.
+Do not write the actual questions yet.
+
+6. Create a tutorial-to-quiz coverage blueprint
+Using the locked Tutorial decisions from Phase 4, create a content coverage map for the quiz.
+This must show:
+- which tutorial concepts must be assessed
+- how many questions should likely come from HTML
+- how many from CSS
+- how many from JavaScript
+- whether one or two integrative questions should combine concepts
+- which tutorial concepts are core enough to definitely assess
+- which concepts are better treated as supportive background
+
+This is still planning only.
+Do not write the actual questions yet.
+
+7. Design the quiz flow and state model
+Create a complete conceptual flow of the quiz experience from page load to completion.
+Define the major quiz states, such as:
+- initial load
+- loading questions
+- ready to start
+- in progress
+- validation failed
+- submitted successfully
+- passed
+- failed
+- reward loading
+- reward displayed
+- history displayed
+- error states
+
+For each state, explain:
+- what the user sees
+- what actions are possible
+- what transitions lead to the next state
+- what must happen to keep the page understandable
+
+8. Define the quiz data architecture
+At a high level, plan the quiz data structure and source model.
+Explain:
+- why the quiz data must live in a local file
+- what categories of information each question record likely needs
+- what metadata the quiz may need overall
+- what should remain out of the HTML source
+- what should remain out of the JS source if possible for strongest rubric alignment
+- how the data structure should stay simple, readable, and demo-friendly
+
+Do not produce the actual JSON/XML/text content yet.
+Focus on architecture only.
+
+9. Define the randomization strategy
+Plan how randomization should work conceptually.
+Explain:
+- what should be randomized
+- whether only question order or also answer option order should be randomized
+- which choice is safest and clearest for this assignment
+- how randomization affects fairness, consistency, and debugging
+- what later implementation should keep in mind to avoid confusing results/history/demo explanation
+
+If you recommend randomizing only question order, justify it.
+If you recommend randomizing answer order too, justify that carefully.
+
+10. Define the answer state and interaction model
+Create a planning section for how answer selection should conceptually work.
+Explain:
+- how each question’s answer state should be represented conceptually
+- how the system should know whether the quiz has “started”
+- what counts as first meaningful interaction
+- how the page should respond to answer changes
+- whether answers should remain editable before submission
+- how the interaction model should stay simple and easy to explain
+
+11. Plan the validation strategy
+This is one of the most important sections.
+
+Define:
+- what should happen if the user tries to submit with unanswered questions
+- how unanswered questions should be detected
+- where validation feedback should appear
+- whether missing questions should be listed, highlighted, or both
+- how specific the feedback should be
+- whether the page should scroll/focus the user toward the issue
+- how validation feedback can stay helpful without feeling harsh
+- how validation logic should remain explainable in the demo
+
+Do not code.
+Just design the validation behavior and UX.
+
+12. Plan the scoring and pass/fail strategy
+At a planning level, decide:
+- how scoring should work
+- how percentage should be calculated
+- what pass threshold should be used
+- why that pass threshold is appropriate
+- how pass/fail should be communicated
+- how the result logic should stay transparent and easy to explain
+
+You should explicitly recommend a pass threshold for this project and justify it.
+Do not leave the decision vague.
+
+13. Plan the result display strategy
+Define what the results region should contain.
+Include:
+- score
+- percentage
+- pass/fail status
+- short interpretation text
+- relation to previous attempts
+- what should appear immediately after submission
+- what should remain visible afterward
+- how the result display should stay clear, concise, and professional
+
+14. Design the reward strategy and public API planning
+This section is critical.
+
+You must propose multiple reward concepts that could be fetched from a public API on pass.
+Generate at least 3 realistic reward directions.
+For each option, explain:
+- what kind of reward content it is
+- why it would feel meaningful in SkillTrack
+- how appropriate it is for an academic-professional site
+- how easy it would likely be to explain in the demo
+- risks or weaknesses
+
+Then:
+- compare the options
+- recommend one reward direction
+- explain why it is the safest and strongest choice for this assignment
+
+Important:
+You are planning the reward concept and API direction only.
+Do not write actual API code.
+Do not assume unreliable or flashy reward behavior if a simple and robust option is better.
+
+15. Plan the attempt history and localStorage strategy
+This is another major section.
+
+Define:
+- what information each saved attempt should include
+- how attempts should be ordered when displayed
+- how the current attempt should relate to previous attempts
+- whether the history should show all attempts or a limited recent set
+- what “clear history” should conceptually do
+- how the page should behave if no previous history exists
+- how the page should behave if localStorage fails or stored data is corrupted
+- how this feature should stay understandable and demo-friendly
+
+16. Plan the beforeunload warning strategy
+This section must be precise.
+
+Define:
+- exactly when the quiz should count as “started”
+- when the beforeunload protection should activate
+- what should happen before the quiz starts
+- what should happen after successful submission
+- how the dirty/in-progress state should conceptually work
+- what edge cases should be considered
+- how this feature should be explained later in the demo without confusion
+
+Important:
+Keep this planning aligned with the brief:
+the warning is for after the user has started the quiz but before successful submission.
+
+17. Plan error and edge-case handling
+Create a section covering major non-happy-path cases, such as:
+- question data file fails to load
+- malformed question data
+- reward API fails
+- reward API returns unusable data
+- localStorage unavailable
+- corrupted saved history
+- submit clicked with unanswered questions
+- very fast repeated submissions
+- refresh/navigation attempts during progress
+
+For each case, explain:
+- what the user should see
+- what the page should still allow
+- how the behavior should remain graceful and professional
+
+18. Plan clarity, accessibility, and responsiveness at a conceptual level
+Without coding, explain how the quiz should later support:
+- scannable instructions
+- clear question grouping
+- readable answer options
+- accessible feedback
+- clear button hierarchy
+- mobile-friendly layout
+- visible but non-disruptive attempt history
+- easy use by assessors who review quickly
+
+19. Plan the relationship between quiz UX and demo explainability
+Create a dedicated section that explains:
+- which quiz features will likely need the clearest explanation in the live demo
+- how the planned structure makes those explanations easier
+- what visible regions or flows will help you talk through the logic
+- how to keep the final quiz impressive without making it overly complex
+
+20. Identify risks in the Quiz page plan and mitigate them
+List risks such as:
+- overcomplicating the quiz
+- weak alignment with tutorial content
+- validation feedback being too vague
+- reward feature feeling gimmicky
+- localStorage history becoming cluttered
+- beforeunload behavior becoming confusing
+- too many moving parts for the demo
+- page becoming visually crowded
+
+For each risk, explain how later phases should avoid it.
+
+21. Lock the Quiz planning decisions
+Create a section called “Locked Quiz Planning Decisions for Future Phases.”
+This should capture the decisions that later phases should inherit and not keep re-debating, such as:
+- quiz format
+- approximate question count
+- topic coverage distribution
+- question randomization approach
+- validation behavior
+- pass threshold
+- reward direction
+- attempt history fields
+- beforeunload activation logic
+- results presentation logic
+- page-region priorities
+
+22. Create a Phase 5 decision summary
+End with a concise summary that future phases can reference when actual quiz implementation begins.
+
+Output format:
+Structure your response in clear markdown using these sections:
+
+1. Phase 5 Goal and Quiz Page Purpose
+2. Quiz Experience Strategy
+3. Assessment Goals of the Quiz
+4. Overall Quiz Page Structure
+5. Quiz Format and Question Model
+6. Tutorial-to-Quiz Coverage Blueprint
+7. Quiz Flow and State Model
+8. Quiz Data Architecture
+9. Randomization Strategy
+10. Answer State and Interaction Model
+11. Validation Strategy
+12. Scoring and Pass/Fail Strategy
+13. Result Display Strategy
+14. Reward Strategy and Public API Planning
+15. Attempt History and localStorage Strategy
+16. beforeunload Warning Strategy
+17. Error and Edge-Case Handling Plan
+18. Clarity, Accessibility, and Responsiveness Considerations
+19. Quiz UX and Demo Explainability
+20. Quiz Planning Risks and Mitigations
+21. Locked Quiz Planning Decisions for Future Phases
+22. Phase 5 Decision Summary
+23. Phase 5 Definition of Done
+
+Additional instructions:
+- Be comprehensive and practical.
+- Do not code.
+- Do not write the final quiz questions yet.
+- Do not create the final data file yet.
+- Do not move into implementation.
+- Stay aligned with the locked requirements from Phase 1, the locked concept from Phase 2, the locked architecture from Phase 3, and the locked tutorial decisions from Phase 4.
+- Where you make a planning choice that is not explicitly required by the brief/rubric, label it clearly as “inference.”
+- Optimize for strong rubric performance, coherent product identity, robust later implementation, and easy demo explainability.
+
+Useful quality lens for this phase:
+A strong Phase 5 output should make later development of the Quiz page feel straightforward because the following are already clear:
+- what the quiz assesses
+- how many questions and what format it should use
+- how the page is structured
+- how validation should behave
+- how scoring and pass/fail should work
+- what reward direction should be used
+- how attempt history should work
+- when beforeunload should activate and clear
+- how the whole quiz experience fits the SkillTrack Learning Portfolio product
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase6PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse6" aria-expanded="false"
+                                aria-controls="phasePromptCollapse6">
+                            Phase 6 — Shared UI Shell Development
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse6" class="accordion-collapse collapse"
+                         aria-labelledby="phase6PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 6 of this university web application project.
+
+Important:
+This phase is the first implementation phase.
+You should now begin creating and/or modifying project files.
+However, this phase is ONLY for building the shared UI shell and global foundation of the site.
+Do not fully implement the Tutorial content yet.
+Do not implement the Quiz logic yet.
+Do not write the AI Reflection page content yet.
+Do not write the full CV page content yet.
+Your job is to create the reusable site-wide structure that all later phases will build on.
+
+Inputs you must use:
+- The original assignment brief and marking rubric already provided earlier
+- The locked requirement analysis from Phase 1
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+- The locked Tutorial planning decisions from Phase 4
+- The locked Quiz planning decisions from Phase 5
+
+Locked context you must inherit:
+- Product identity: SkillTrack Learning Portfolio
+- Tagline: “Learn, demonstrate, and reflect on web fundamentals.”
+- Tone: clear, professional, supportive, instructional
+- Visual direction: clean, structured, modern-academic
+- Locked flow: Tutorial → Quiz → AI Reflection → CV
+- Locked navigation labels: Tutorial, Quiz, AI Reflection, CV
+- Shared layout expectation: consistent global header, navigation, footer, and section rhythm across all pages
+- Requirement constraints: no React, Vue, Angular; use relative links; keep code commented and understandable; site must feel like one coherent product
+
+Main objective of Phase 6:
+Implement the shared UI shell and structural foundation for the whole website so later phases can add page-specific content and functionality cleanly.
+
+What you must do in this phase:
+
+1. Build the site-wide structural foundation
+Implement the shared frame used across all four required pages:
+- header
+- site identity area
+- top navigation
+- main content wrapper
+- footer
+- shared spacing/layout rhythm
+
+2. Create or update the four required HTML pages
+Set up the actual page files for:
+- Tutorial
+- Quiz
+- AI Reflection
+- CV
+
+At this stage:
+- each page should have the shared shell fully working
+- each page should include a page-specific main area with clear placeholder sections/comments aligned with earlier locked plans
+- placeholders must be structural and meaningful, not random filler text
+- do not add full final page content yet
+
+3. Implement the shared visual system
+Create the global styling foundation that later phases will reuse.
+This should include:
+- typography system
+- color direction
+- spacing system
+- shared container/layout rules
+- reusable section styles
+- reusable CTA/button styling
+- shared content block / card styling if appropriate
+- responsive behavior for the shell and shared patterns
+
+Important:
+- the design must feel distinctive beyond plain default Bootstrap styling
+- keep the design professional, readable, and coherent with the SkillTrack concept
+- if Bootstrap is used, it must not dominate the visual identity
+- custom CSS must do real work
+
+4. Implement shared navigation behavior
+Make the navigation actually work across the four pages using relative links.
+Also:
+- indicate the active/current page clearly
+- keep labels literal and consistent
+- preserve the locked order: Tutorial → Quiz → AI Reflection → CV
+
+5. Implement semantic and accessible structural HTML
+Use meaningful semantic structure where appropriate, such as:
+- header
+- nav
+- main
+- section
+- footer
+
+The code should support readability, accessibility, and later validation.
+
+6. Keep page-specific areas intentionally scaffolded
+Within each page’s main content, create structural placeholders aligned with prior planning:
+
+Tutorial page placeholders should reflect:
+- intro/context
+- learning objectives
+- HTML section
+- CSS section
+- JavaScript section
+- demo area
+- best-practice rationale
+- summary
+- quiz CTA area
+
+Quiz page placeholders should reflect:
+- intro/instructions
+- pass threshold info
+- dynamic question area
+- validation area
+- controls area
+- results area
+- reward area
+- attempt history area
+
+AI Reflection page placeholders should reflect:
+- intro
+- use case sections
+- error analysis
+- critical evaluation
+- summary
+
+CV page placeholders should reflect:
+- profile header
+- biography/summary
+- skills
+- experience/projects
+- education
+- references section
+
+These placeholders should prepare later development without prematurely implementing those phases.
+
+7. Create shared asset structure
+Implement the recommended file/folder organization where appropriate, keeping it simple and clean.
+Use a sensible separation such as:
+- shared CSS
+- shared JS
+- page-specific assets only where needed
+- data folder reserved for later quiz data
+- images folder reserved for later profile and other assets
+
+Do not over-engineer the structure.
+
+8. Implement only minimal shared JavaScript if needed
+If a shared JavaScript file is useful for:
+- active nav state
+- small shared UI helpers
+- non-page-specific behavior
+
+then create it.
+But do not implement quiz logic or tutorial demo logic yet.
+
+9. Keep code demo-friendly
+All code created in this phase must be:
+- well organized
+- clearly named
+- consistently formatted
+- commented where helpful
+- easy for a student to explain in a live demo
+
+10. Do not fake later functionality
+Do not simulate the quiz working.
+Do not hard-code tutorial lesson content.
+Do not invent final AI reflection entries.
+Do not fabricate CV details.
+This phase is about shell and foundation only.
+
+Output requirements:
+After making the changes, provide:
+1. A summary of what files were created or updated
+2. A short explanation of the shared structure implemented
+3. A short explanation of the design system choices
+4. A note on how the shell supports later phases
+5. Any important assumptions labeled clearly as “assumption” or “inference”
+
+Quality bar:
+A strong Phase 6 result should leave the project with:
+- all required pages existing
+- consistent global navigation and layout
+- a distinctive shared visual base
+- meaningful structural scaffolding for every page
+- clean foundations for later implementation
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase7PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse7" aria-expanded="false"
+                                aria-controls="phasePromptCollapse7">
+                            Phase 7 — Tutorial Page Implementation
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse7" class="accordion-collapse collapse"
+                         aria-labelledby="phase7PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 7 of this university web application project.
+
+Important:
+This phase is for implementing the Tutorial page.
+You may create and modify files.
+However:
+- do not implement the Quiz page logic yet
+- do not implement the AI Reflection page content yet
+- do not implement the full CV page content yet
+- only add what is needed on shared files if it directly supports the Tutorial page
+
+Inputs you must use:
+- The original brief and rubric
+- The locked requirement analysis from Phase 1
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+- The locked Tutorial planning decisions from Phase 4
+- The shared shell already created in Phase 6
+
+Locked Tutorial decisions you must inherit:
+- Section order:
+  Introduction → Objectives → HTML → CSS → JavaScript → Demo(s) → Best-practice rationale → Summary → Quiz CTA
+- Audience level: beginner to early-intermediate
+- Teaching style: structured, supportive, instructional
+- Primary demo direction: Live Style Toggle
+- Tutorial must teach HTML, CSS, and JavaScript fundamentals
+- Tutorial must prepare the user for the quiz
+- Tutorial must include meaningful examples and at least one meaningful interactive demo
+- Tutorial must go beyond definitions and explain best practices
+
+Main objective of Phase 7:
+Implement a polished, rubric-aligned Tutorial page that teaches the required fundamentals clearly and coherently inside the SkillTrack Learning Portfolio.
+
+What you must do in this phase:
+
+1. Implement the full Tutorial page content
+Write and structure the actual tutorial content for:
+- introduction/context
+- learning objectives
+- HTML fundamentals
+- CSS fundamentals
+- JavaScript fundamentals
+- best-practice rationale
+- summary
+- quiz transition
+
+2. Keep the tutorial content scoped appropriately
+The tutorial should cover the locked fundamentals only.
+It should not drift into advanced topics that add unnecessary complexity.
+
+3. Implement meaningful code examples
+Add actual tutorial examples/snippets aligned to the locked plan.
+The examples should:
+- illustrate concepts clearly
+- be non-trivial but still understandable
+- support HTML, CSS, and JavaScript learning
+- align with the later quiz content
+- include comments or annotations where helpful
+
+4. Implement the primary interactive demo
+Build the locked demo direction:
+- Live Style Toggle
+
+At a conceptual level, this demo should help the learner see:
+- HTML provides structure
+- CSS classes/style choices affect appearance
+- JavaScript handles interaction
+
+Implementation expectations:
+- it must be genuinely interactive
+- it must be educational, not decorative
+- it must fit naturally into the tutorial flow
+- it must be easy to explain in the demo session
+
+5. Optionally implement one very small secondary interaction only if it clearly adds value
+Do not add unnecessary complexity.
+Do not let the page become overloaded.
+
+6. Ensure strong teaching flow and signposting
+The page should feel guided.
+Use:
+- clear section headings
+- transitions between HTML, CSS, and JavaScript
+- mini-recaps where appropriate
+- supportive language
+- logical progression
+
+7. Reinforce best practices explicitly
+The rubric rewards depth beyond definitions.
+Make sure the tutorial clearly explains ideas such as:
+- semantic HTML
+- separation of concerns
+- readable and maintainable CSS
+- clear and focused JavaScript behavior
+
+8. Implement the end-of-page transition to the Quiz
+At the end of the Tutorial page:
+- provide a strong, visible, well-labelled CTA to the Quiz page
+- make the transition feel natural and motivating
+- align it with the product flow and tone
+
+9. Keep the page consistent with the shared shell
+The Tutorial page must feel like part of SkillTrack, not a separate design.
+Match the shared shell, typography, spacing, and design system from Phase 6.
+
+10. Keep the page demo-friendly
+The page should be easy to explain live.
+Avoid overcomplicated patterns.
+Favor clarity over flashy effects.
+
+11. Maintain code quality
+The implementation must be:
+- semantic
+- responsive
+- commented where useful
+- organized and readable
+- easy to validate later
+- easy for the student to explain later
+
+12. Do not implement quiz content or logic here
+You may link to the Quiz page, but do not build the actual quiz system in this phase.
+
+Output requirements:
+After making the changes, provide:
+1. A summary of which files were created or updated
+2. A structured explanation of the Tutorial page sections implemented
+3. A short explanation of the code examples used
+4. A short explanation of the interactive demo and why it supports learning
+5. A note on how the tutorial prepares the user for the Quiz
+6. Any assumptions clearly labelled
+
+Quality bar:
+A strong Phase 7 result should produce a Tutorial page that:
+- clearly teaches HTML, CSS, and JavaScript
+- includes meaningful examples
+- includes at least one working interactive demo
+- explains best practices
+- ends with a strong quiz CTA
+- feels polished, coherent, and rubric-aligned
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase8PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse8" aria-expanded="false"
+                                aria-controls="phasePromptCollapse8">
+                            Phase 8 — Quiz Page Implementation
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse8" class="accordion-collapse collapse"
+                         aria-labelledby="phase8PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 8 of this university web application project.
+
+Important:
+This phase is for implementing the Quiz page and quiz system.
+You may create and modify files.
+Do not rewrite the Tutorial page unless a small integration adjustment is necessary.
+Do not implement the AI Reflection page content yet.
+Do not implement the full CV page content yet.
+
+Inputs you must use:
+- The original brief and rubric
+- The locked requirement analysis from Phase 1
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+- The locked Tutorial planning decisions from Phase 4
+- The locked Quiz planning decisions from Phase 5
+- The shared shell from Phase 6
+- The implemented Tutorial page from Phase 7
+
+Locked Quiz decisions you must inherit:
+- Use a single question format: single-select multiple choice
+- 4 answer options per question
+- Minimum 10 questions; recommended 12
+- Balanced coverage across HTML, CSS, JavaScript
+- Randomize question order only
+- Block submission if unanswered questions remain
+- Pass threshold: 70%
+- Show score, percentage, and pass/fail
+- Reward on pass only, fetched from a public API
+- Store attempt history in localStorage
+- Activate beforeunload after first answer selection
+- Clear beforeunload after successful submission
+- Keep questions out of HTML and ideally out of JS by storing them in a separate local data file
+
+Main objective of Phase 8:
+Implement a fully working, rubric-aligned Quiz page that dynamically loads questions, validates submissions, calculates results, fetches a pass reward from a public API, stores attempt history, and remains easy to explain in a live demo.
+
+What you must do in this phase:
+
+1. Create the quiz data file
+Implement the quiz questions in a separate local data file.
+Requirements:
+- do not hard-code question content in the HTML
+- keep full question content out of the main JS logic if possible
+- include at least 10 questions; preferably implement 12 if it improves coverage cleanly
+- keep coverage aligned with the Tutorial page
+- make the questions fair and directly based on what the Tutorial teaches
+
+2. Implement dynamic question loading
+Load the quiz data at runtime from the local data file.
+The page should not contain hard-coded question markup in the HTML.
+Questions must be rendered dynamically.
+
+3. Implement question randomization
+Randomize question order on each load.
+Do not randomize answer option order unless there is a very strong reason.
+Favor simplicity and demo explainability.
+
+4. Implement the quiz page structure
+Build out the planned Quiz page regions:
+- instructions / intro
+- pass threshold info
+- dynamic question area
+- validation feedback area
+- controls area
+- results area
+- reward area
+- attempt history area
+- contextual error messaging where needed
+
+5. Implement answer state tracking
+Track the selected answer for each question clearly and cleanly.
+Users should be able to change answers before final submission.
+
+6. Implement validation behavior
+If the user tries to submit without answering all questions:
+- block submission
+- clearly identify the missing questions
+- provide helpful guidance
+- keep the tone supportive, not harsh
+
+7. Implement scoring and pass/fail
+On successful submission:
+- calculate score correctly
+- calculate percentage correctly
+- determine pass/fail using the locked 70% threshold
+- display results without page reload
+
+8. Implement reward logic using a public API
+On pass only:
+- fetch reward content from a public API
+- validate the API response before displaying it
+- display the reward in the reward region
+- keep the reward meaningful and professional for SkillTrack
+
+Important:
+- reward content must not be hard-coded
+- if the preferred API response is unavailable or malformed, fail gracefully
+- preserve the pass result even if the reward fetch fails
+
+9. Implement attempt history using localStorage
+Save each attempt with:
+- date/time
+- score
+- percentage
+- pass/fail
+
+Display previous attempts clearly.
+Also implement a clear-history control if appropriate.
+
+Requirements:
+- use try/catch around storage operations where appropriate
+- handle missing or corrupted stored data gracefully
+- if storage is unavailable, fail gracefully without breaking the quiz
+
+10. Implement beforeunload behavior
+The browser-native warning should:
+- activate only after the first answer selection
+- remain active while the quiz is in progress
+- remain active if validation fails and submission is not yet successful
+- clear after successful submission
+
+Do not activate it before the quiz is actually started.
+
+11. Implement error handling
+Handle at least these cases gracefully:
+- question data file load fails
+- malformed question data
+- reward API fails
+- unusable reward API response
+- localStorage unavailable
+- corrupted attempt history
+
+12. Keep the UI clean and understandable
+The Quiz page should feel structured and not cluttered.
+Maintain clear separation between:
+- questions
+- validation
+- results
+- reward
+- history
+
+13. Keep the implementation demo-friendly
+The logic should be organized clearly enough that a student can explain:
+- where questions come from
+- how rendering works
+- how randomization works
+- how validation works
+- how scoring works
+- how reward fetching works
+- how localStorage works
+- how beforeunload works
+
+14. Maintain code quality
+The implementation must be:
+- readable
+- modular where appropriate
+- commented where useful
+- consistent with the shared shell
+- responsive
+- suitable for later validation and cleanup
+
+15. Do not add unnecessary feature creep
+Avoid timers, progress bars, animations, or other extras unless they are very lightweight and clearly beneficial.
+Prioritize rubric alignment and reliability.
+
+Output requirements:
+After making the changes, provide:
+1. A summary of files created or updated
+2. A short explanation of the data file structure used
+3. A short explanation of the rendering flow
+4. A short explanation of validation, scoring, reward, history, and beforeunload behavior
+5. Any assumptions or compromises clearly labelled
+6. Any known limitations clearly labelled
+
+Quality bar:
+A strong Phase 8 result should produce a Quiz page that:
+- loads questions dynamically from a local file
+- randomizes question order
+- validates unanswered questions
+- calculates score and pass/fail correctly
+- fetches a public-API reward on pass
+- saves and displays attempt history
+- handles beforeunload correctly
+- feels polished, coherent, and easy to explain
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase9PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse9" aria-expanded="false"
+                                aria-controls="phasePromptCollapse9">
+                            Phase 9 — AI Reflection Log Page Implementation
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse9" class="accordion-collapse collapse"
+                         aria-labelledby="phase9PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 9 of this university web application project.
+
+Important:
+This phase is for implementing the AI Reflection Log page.
+You may create and modify files.
+Do not substantially rewrite the Tutorial or Quiz unless a very small integration fix is necessary.
+Do not implement the full CV page yet.
+
+Inputs you must use:
+- The original brief and rubric
+- The locked requirement analysis from Phase 1
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+- The implemented shared shell, Tutorial page, and Quiz page from earlier phases
+
+Main objective of Phase 9:
+Implement a polished AI Reflection Log page that documents and critically evaluates AI usage in the project in a way that is specific, credible, evidence-based, and rubric-aligned.
+
+Important rubric reality:
+The reflection must go beyond vague statements like “AI helped me.”
+It should include:
+- specific prompts
+- summaries of what the AI produced
+- what was changed or corrected
+- at least two distinct use cases
+- at least one example of subtle AI error or limitation
+- critical evaluation of reliability, risks, and ethics
+
+What you must do in this phase:
+
+1. Implement the AI Reflection page structure
+Build the full page using the locked structure:
+- introduction
+- AI use case sections
+- error analysis section
+- critical evaluation section
+- summary/takeaways
+
+2. Use the real project workflow as the basis
+The reflection should be grounded in the actual project development process as much as possible.
+Where the real prompts/workflow are available in context, use them.
+Do not fabricate unrealistic AI usage.
+If exact wording is unavailable, summarize honestly and clearly.
+
+3. Include at least two distinct AI use cases
+Examples may include:
+- requirement interpretation and planning
+- concept selection and site identity planning
+- tutorial planning
+- quiz system planning
+- structural refinement or debugging support
+
+4. Document prompts and outputs meaningfully
+For each use case, include:
+- what was asked
+- what AI produced
+- how the output helped
+- what was edited, refined, or corrected
+- what limitations or risks were noticed
+
+5. Include at least one subtle AI error or limitation
+You must include a specific example of something AI got wrong, incomplete, too generic, too broad, or risky.
+Then explain:
+- why it was a problem
+- how it was detected
+- how it was corrected
+- what this taught the student about using AI critically
+
+6. Keep the reflection analytical, not defensive
+The page should show mature critical thinking.
+It should not blindly praise AI and should not read as a confession.
+It should read as reflective academic documentation.
+
+7. Include reliability, risk, and ethics discussion
+The page should address ideas such as:
+- verification of AI-generated suggestions
+- risk of over-reliance
+- need to understand submitted code personally
+- importance of academic honesty
+- importance of correcting AI mistakes
+- why explainability matters in a live demo
+
+8. Keep the page consistent with SkillTrack
+The reflection page should feel like part of the same product:
+- same visual system
+- same layout language
+- same professional tone
+- slightly more analytical writing style
+
+9. Keep the content specific and credible
+Avoid empty phrases.
+Prefer concrete, project-linked explanations.
+
+10. Make the page easy to read
+Use clear structure, headings, and content blocks so assessors can quickly verify that the required reflection evidence is present.
+
+11. Keep the implementation demo-friendly
+A student should be able to explain the reflection page and point to:
+- where AI was used
+- where it helped
+- where it had limitations
+- how human judgment remained important
+
+12. Maintain code quality
+The page implementation must be:
+- semantic
+- readable
+- responsive
+- consistent with the rest of the site
+- easy to validate later
+
+Output requirements:
+After making the changes, provide:
+1. A summary of files created or updated
+2. A short explanation of the reflection page sections implemented
+3. A note on the distinct AI use cases documented
+4. A note on the subtle AI limitation/error example included
+5. A note on how the page aligns with the rubric
+6. Any assumptions clearly labelled
+
+Quality bar:
+A strong Phase 9 result should produce an AI Reflection page that:
+- looks polished and coherent
+- includes specific project-linked AI usage
+- includes at least two distinct use cases
+- includes a subtle AI limitation/error example
+- critically evaluates reliability, risk, and ethics
+- feels credible, thoughtful, and rubric-aligned
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase10PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse10" aria-expanded="false"
+                                aria-controls="phasePromptCollapse10">
+                            Phase 10 — Personalised CV Page Implementation
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse10" class="accordion-collapse collapse"
+                         aria-labelledby="phase10PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 10 of this university web application project.
+
+Important:
+This phase is for implementing the Personalised CV page.
+You may create and modify files.
+Do not substantially rewrite earlier pages unless a small integration fix is necessary.
+
+Inputs you must use:
+- The original brief and rubric
+- The locked requirement analysis from Phase 1
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+- The implemented site shell and earlier pages from previous phases
+
+Main objective of Phase 10:
+Implement a professional, employer-facing CV page that still feels like part of the SkillTrack Learning Portfolio and satisfies the brief’s requirement for a biography/CV page with a picture and references section.
+
+Important brief and rubric reality:
+The page should:
+- include a brief biography of the author
+- include a picture
+- feel like a professional CV suitable for potential employers
+- use placeholders for personal details where appropriate
+- include around 500 words of content
+- include a clearly marked references section at the bottom
+- include AI assistance among the sources acknowledged
+- use strong presentation and responsiveness
+
+What you must do in this phase:
+
+1. Implement the full CV page structure
+Build the page using the planned structure:
+- profile/header block
+- biography/professional summary
+- skills
+- experience/projects
+- education
+- optional relevant sections if useful
+- references section at the bottom
+
+2. Write professional CV content
+Create polished, coherent CV-style content.
+Requirements:
+- aim for about 500 words overall
+- keep tone professional and employer-facing
+- do not invent unrealistic achievements
+- if exact personal details are not available, use clear placeholders rather than making false claims
+- keep the content strong enough to look intentional, not empty
+
+3. Include an image area
+Implement the profile image area cleanly.
+If a real photo asset is not yet available:
+- use a clearly labelled placeholder image area or placeholder asset strategy
+- do not break the page if the real image is absent
+
+4. Make the page feel professional but consistent with SkillTrack
+This page should feel slightly more employer-facing than the Tutorial or Quiz, but still clearly part of the same product.
+Maintain consistent navigation, typography, spacing, and visual identity.
+
+5. Include standard CV-style sections appropriately
+Use standard professional structure where relevant.
+Do not overload the page with unnecessary sections.
+Favor clarity and polish.
+
+6. Use placeholders responsibly
+Where personal details should not be hard-coded or are unknown, use explicit placeholders such as:
+- phone
+- email
+- references
+- profile links
+
+Make placeholders look intentional and professional.
+
+7. Implement the references section at the bottom
+This is required.
+The references section should:
+- be clearly marked
+- list sources used in preparing the assignment
+- acknowledge AI assistance
+- be visually distinct enough to locate easily
+- fit the site design
+
+8. Keep the page easy to scan
+Assessors should quickly see that this is a polished professional CV page.
+Use good hierarchy and structure.
+
+9. Keep the implementation demo-friendly
+A student should be able to explain:
+- why the page is part of the SkillTrack product
+- how it balances professional identity with assignment requirements
+- where placeholders were used and why
+- where references are acknowledged
+
+10. Maintain code quality
+The implementation must be:
+- semantic
+- responsive
+- readable
+- consistent with the shared shell
+- easy to validate later
+
+Output requirements:
+After making the changes, provide:
+1. A summary of files created or updated
+2. A short explanation of the CV page sections implemented
+3. A note on how placeholders were handled
+4. A note on the references section implementation
+5. A note on how the page stays consistent with SkillTrack
+6. Any assumptions clearly labelled
+
+Quality bar:
+A strong Phase 10 result should produce a CV page that:
+- feels professional and polished
+- includes about 500 words of meaningful CV-style content
+- includes a profile image area
+- includes clear placeholders where needed
+- includes a clearly marked references section at the bottom
+- fits naturally into the overall product
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase11PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse11" aria-expanded="false"
+                                aria-controls="phasePromptCollapse11">
+                            Phase 11 — Integration and Consistency Pass
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse11" class="accordion-collapse collapse"
+                         aria-labelledby="phase11PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+You are now working on Phase 11 of this university web application project.
+
+Important:
+This phase is for integration and coherence, not for inventing major new features.
+You may modify files across the project, but changes should focus on consistency, polish, coherence, and cross-page alignment.
+
+Inputs you must use:
+- The original brief and rubric
+- The locked concept and site identity from Phase 2
+- The locked architecture decisions from Phase 3
+- The implemented pages from Phases 6–10
+
+Main objective of Phase 11:
+Make the website feel like one coherent, submission-ready product rather than a set of individually completed pages.
+
+What you must do in this phase:
+
+1. Review the whole product as one experience
+Assess the site across all four pages in terms of:
+- visual consistency
+- navigation consistency
+- page titles and heading consistency
+- spacing and section rhythm
+- CTA consistency
+- tone consistency
+- overall coherence with SkillTrack Learning Portfolio
+
+2. Improve cross-page consistency
+Where needed, refine:
+- typography usage
+- button styles
+- cards/section styling
+- intro block patterns
+- footer consistency
+- active nav behavior
+- page-to-page spacing patterns
+
+3. Strengthen the intended user journey
+Make sure the flow Tutorial → Quiz → AI Reflection → CV feels intentional.
+Especially:
+- the Tutorial-to-Quiz step should feel strong
+- AI Reflection and CV should feel connected, not bolted on
+- navigation should remain literal and clear
+
+4. Align microcopy and UI language
+Standardize labels, headings, instructions, and CTA wording so the product voice stays consistent.
+
+5. Improve coherence without feature creep
+Do not add unrelated new features.
+Only add light improvements that strengthen polish and consistency.
+
+6. Check references and page endings
+Ensure pages end cleanly and intentionally.
+Make sure the CV references section remains clearly marked and visually findable.
+
+7. Keep the site demo-friendly
+The site should now be easy to walk through live as one product.
+Visible sections and transitions should support explanation.
+
+8. Preserve code quality
+Any refinements should keep the code:
+- readable
+- consistent
+- minimally redundant
+- easy to explain
+
+Output requirements:
+After making the changes, provide:
+1. A summary of files updated
+2. A structured list of consistency improvements made
+3. A note on how the user journey was strengthened
+4. A note on how the site now better feels like one product
+5. Any assumptions clearly labelled
+
+Quality bar:
+A strong Phase 11 result should make the site feel:
+- unified
+- polished
+- intentional
+- consistent in tone and styling
+- easier to assess and easier to demo
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="phase12PromptHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#phasePromptCollapse12" aria-expanded="false"
+                                aria-controls="phasePromptCollapse12">
+                            Phase 12 — Validation, Testing, and Bug Fixing
+                        </button>
+                    </h3>
+                    <div id="phasePromptCollapse12" class="accordion-collapse collapse"
+                         aria-labelledby="phase12PromptHeading" data-bs-parent="#phasePromptAccordion">
+                        <div class="accordion-body">
+                            <div class="prompt-panel">
+                                <pre class="code-block">
+Phase 12 — Validation, Testing, and Bug Fixing
+
+You are now working on Phase 12 of this university web application project.
+
+Important:
+This phase is for cleanup, testing, validation-oriented review, and bug fixing.
+You may modify files across the project.
+Do not invent major new features.
+Prioritize correctness, reliability, validation readiness, and rubric alignment.
+
+Inputs you must use:
+- The original brief and rubric
+- All implemented project files from earlier phases
+
+Main objective of Phase 12:
+Make the project as clean, robust, and submission-ready as possible by fixing structural, functional, and quality issues.
+
+Important:
+Do not claim that something was browser-tested or validator-tested unless you actually verified it in your environment.
+If you infer a likely issue or likely fix, label it clearly.
+Be honest about what was confirmed versus what still needs manual verification.
+
+What you must do in this phase:
+
+1. Review project-wide HTML structure
+Check for likely issues affecting:
+- semantic structure
+- heading hierarchy
+- missing labels/alt text where relevant
+- invalid nesting
+- repeated IDs
+- relative links
+- missing titles or metadata if applicable
+
+2. Review project-wide CSS quality
+Check for likely issues affecting:
+- consistency
+- responsiveness
+- unnecessary duplication
+- layout stability
+- readability
+- maintainability
+
+3. Review project-wide JavaScript quality
+Check for likely issues affecting:
+- clarity
+- repeated logic
+- error handling
+- event wiring
+- fragile selectors
+- readability and explainability
+
+4. Review the Tutorial page
+Check:
+- structure and clarity
+- demo behavior
+- CTA to Quiz
+- alignment with rubric expectations
+
+5. Review the Quiz page carefully
+Check:
+- question data loading
+- randomization
+- dynamic rendering
+- answer state
+- validation behavior
+- scoring
+- pass/fail logic
+- reward behavior
+- attempt history behavior
+- beforeunload behavior
+- graceful failure handling
+
+6. Review the AI Reflection page
+Check:
+- specificity
+- structure
+- critical evaluation
+- presence of at least two use cases
+- presence of a subtle limitation/error example
+
+7. Review the CV page
+Check:
+- professionalism
+- biography completeness
+- image area behavior
+- placeholders
+- references section visibility
+
+8. Fix bugs and polish rough edges
+Make reasonable fixes where needed.
+Prioritize:
+- broken flows
+- confusing UI
+- fragile code
+- rubric-related gaps
+- consistency issues
+
+9. Keep the code explainable
+If a possible fix would make the code much harder to explain, prefer the cleaner and more understandable solution.
+
+10. Produce an honest readiness report
+After changes, provide a structured report with:
+- what issues were found
+- what was fixed
+- what remains to verify manually
+- any likely validator/browser risks still worth checking
+
+Output requirements:
+After making the changes, provide:
+1. A summary of files updated
+2. A structured bug-fix and cleanup report
+3. A section called “Confirmed improvements”
+4. A section called “Manual checks still recommended”
+5. A section called “Known limitations or risks”
+6. Clear labels distinguishing confirmed vs inferred observations
+
+Quality bar:
+A strong Phase 12 result should leave the project:
+- cleaner
+- more stable
+- more consistent
+- closer to validation readiness
+- easier to demonstrate confidently
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="reflection-review-cycle">
+            <h2>Review, Validation, and Acceptance-Criteria Checking</h2>
+            <div class="reflection-block">
+                <p>
+                    The workflow followed a repeatable review cycle: draft a phase prompt with ChatGPT, refine it,
+                    implement with Codex, review the output, then amend and align with the rubric. A phase was only
+                    considered complete when it met acceptance criteria and could be explained in a demo.
+                </p>
+                <ul class="bullet-list">
+                    <li>Prompt generation and refinement before any code changes.</li>
+                    <li>Implementation review for scope, accuracy, and clarity.</li>
+                    <li>Manual tweaks to ensure rubric alignment and explainability.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="reflection-error-analysis">
+            <h2>Subtle Limitation / Risk Example</h2>
+            <div class="reflection-block">
+                <h3>Example: Phase Prompts That Were Too Broad</h3>
+                <p>
+                    <strong>Issue:</strong> Early prompts suggested adding extra features beyond the brief, which
+                    risked scope creep and reduced clarity.
                 </p>
                 <p>
-                    <strong>How it was detected:</strong> During manual review, the validation list did not match
-                    the on-screen order of randomized questions.
+                    <strong>How it was detected:</strong> Comparing the suggestions against the brief revealed that
+                    some items were not required for marks.
                 </p>
                 <p>
-                    <strong>Correction:</strong> The mapping was changed to use the rendered (shuffled) order when
-                    numbering missing questions.
+                    <strong>Correction:</strong> The prompt was rewritten to focus only on required features and
+                    excellent-band criteria.
                 </p>
                 <p class="reflection-note">
-                    <strong>Lesson:</strong> Even small logic choices can cause subtle user-facing errors. AI output
-                    must be tested against actual runtime behaviour, not just read for plausibility.
+                    <strong>Lesson:</strong> AI can broaden scope quickly; explicit constraints are needed to keep
+                    work aligned to assessment requirements.
                 </p>
             </div>
         </section>
@@ -153,11 +2722,12 @@
             <div class="reflection-block">
                 <h3>Reliability, Risk, and Ethics</h3>
                 <ul class="bullet-list">
-                    <li>AI can accelerate planning, but it can also introduce scope creep or vague statements.</li>
-                    <li>Every AI suggestion must be checked against the rubric to avoid missing requirements.</li>
-                    <li>Over-reliance on AI risks producing code the student cannot explain during the demo.</li>
-                    <li>Ethical use requires transparency about AI assistance and clear human ownership of work.</li>
-                    <li>Verification and testing are essential because AI does not run or validate the project.</li>
+                    <li>ChatGPT was strongest for planning and prompt structure, not implementation accuracy.</li>
+                    <li>Codex accelerated development but still required human verification and refactoring.</li>
+                    <li>Every AI suggestion was checked against the rubric to avoid missing requirements.</li>
+                    <li>Over-reliance would risk producing code I could not explain during the demo.</li>
+                    <li>Ethical use requires transparency and clear human ownership of decisions.</li>
+                    <li>Testing and validation remain human responsibilities because AI does not run the project.</li>
                 </ul>
             </div>
         </section>
@@ -165,10 +2735,9 @@
         <section class="section" id="reflection-summary">
             <h2>Summary and Learnings</h2>
             <p>
-                AI was most valuable for planning, structuring, and checking alignment with the rubric. Human
-                judgment was still required to adjust scope, correct subtle logic issues, and ensure explainable
-                outcomes. The final responsibility for accuracy, ethics, and demonstration readiness remains with
-                the student.
+                ChatGPT and Codex improved productivity, but the project only stayed on track because each phase
+                was reviewed against explicit acceptance criteria. AI supported the work, but did not replace the
+                responsibility to understand, validate, and explain the final code.
             </p>
         </section>
     </div>
