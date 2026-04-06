@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="assets/css/site.css"/>
     <link rel="stylesheet" href="assets/css/cv.css"/>
     <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/volunteer-gallery.js" defer></script>
     <script src="assets/libraries/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body data-page="cv">
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
-    <div class="container">
+    <div class="container px-4">
         <div class="brand">
             <a class="brand-title" href="tutorial.html">SkillTrack Learning Portfolio</a>
             <p class="brand-tagline">Learn, demonstrate, and reflect on web fundamentals.</p>
@@ -38,7 +39,7 @@
         </header>
 
         <section class="section" id="cv-profile">
-            <h2>Profile Header</h2>
+            <h2>Farahnaz Abdi</h2>
             <div class="cv-profile">
                 <img
                         class="cv-photo"
@@ -46,7 +47,6 @@
                         alt="Farahnaz Abdi profile photo"
                 />
                 <div>
-                    <h3 class="cv-name">Farahnaz Abdi</h3>
                     <p class="cv-role">IT Specialist / ICT Analyst</p>
                     <ul class="cv-contact">
                         <li><strong>Email:</strong> [your.address@gmail.com]</li>
@@ -112,34 +112,53 @@
 
         <section class="section" id="cv-skills">
             <h2>Skills</h2>
-          <div class="row g-3 cv-skill-grid">
-            <div class="col-md-6 col-xl-3">
-              <h3>Programming &amp; Development</h3>
+          <div class="row g-4 cv-skill-grid">
+            <div class="col-lg-4 col-md-6">
+              <h3>Programming Languages &amp; Web Technologies</h3>
               <ul class="cv-skills">
-                <li>JavaScript, React.js, Python</li>
-                <li>Java, SQL, SQL Server</li>
+                <li>Java, JavaSE</li>
+                <li>React.js, HTML5</li>
+                <li>JavaScript Libraries</li>
               </ul>
             </div>
-            <div class="col-md-6 col-xl-3">
-              <h3>Data &amp; Analytics</h3>
+            <div class="col-lg-4 col-md-6">
+              <h3>Software Engineering &amp; Design</h3>
               <ul class="cv-skills">
-                <li>Power BI, reporting, dashboards</li>
-                <li>Database development and optimization</li>
+                <li>Programming, Object-Oriented Programming (OOP)</li>
+                <li>Software Design, Software Architectural Design</li>
+                <li>Unified Modeling Language (UML)</li>
               </ul>
             </div>
-            <div class="col-md-6 col-xl-3">
-              <h3>Infrastructure &amp; Security</h3>
+            <div class="col-lg-4 col-md-6">
+              <h3>AI, NLP &amp; Modelling</h3>
               <ul class="cv-skills">
-                <li>Linux administration and server operations</li>
-                <li>F5 BigIP / web application firewalls</li>
-                <li>Infrastructure, security, and troubleshooting</li>
+                <li>Machine Learning, Natural Language Processing (NLP)</li>
+                <li>Natural Language Inference (NLI)</li>
+                <li>Agent-based Modeling, Computational Modeling</li>
               </ul>
             </div>
-            <div class="col-md-6 col-xl-3">
-              <h3>Business Platforms</h3>
+            <div class="col-lg-4 col-md-6">
+              <h3>Microsoft, Data &amp; BI Tools</h3>
               <ul class="cv-skills">
-                <li>Dynamics 365</li>
-                <li>Power Platform</li>
+                <li>Microsoft 365, Microsoft Excel</li>
+                <li>Microsoft Power BI, Microsoft Power Platform</li>
+                <li>Microsoft Endpoint Configuration Manager</li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <h3>Security, Networks &amp; Monitoring</h3>
+              <ul class="cv-skills">
+                <li>F5 BigIP, Cybersecurity</li>
+                <li>Zabbix, Symantec Endpoint Protection</li>
+                <li>Internet of Things (IoT)</li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <h3>IT Services, Analysis &amp; Consulting</h3>
+              <ul class="cv-skills">
+                <li>Technical Services, Software System Analysis</li>
+                <li>IT Consulting, Customer Satisfaction</li>
+                <li>Information Technology Infrastructure</li>
               </ul>
             </div>
           </div>
@@ -148,7 +167,9 @@
         <section class="section" id="cv-experience">
             <h2>Experience / Projects</h2>
             <div class="cv-entry">
-                <h3>illuminance Solutions</h3>
+                <div class="entry-header">
+                    <h3>illuminance Solutions</h3>
+                </div>
                 <p class="cv-meta">ICT Analyst Officer | July 2025 - Present | Perth, WA</p>
                 <ul>
                     <li>Provide IT support and analysis, investigating root causes and resolving client issues.</li>
@@ -157,7 +178,9 @@
                 </ul>
             </div>
             <div class="cv-entry">
-                <h3>Moghavasazi Shargh</h3>
+                <div class="entry-header">
+                    <h3>Moghavasazi Shargh</h3>
+                </div>
                 <p class="cv-meta">Senior Information Technology Specialist | June 2019 - January 2025 | Tehran
                     Province, Iran</p>
                 <ul>
@@ -167,7 +190,9 @@
                 </ul>
             </div>
             <div class="cv-entry">
-                <h3>Central Bank of Iran</h3>
+                <div class="entry-header">
+                    <h3>Central Bank of Iran</h3>
+                </div>
                 <p class="cv-meta">Server Administrator | October 2022 - October 2024 | Tehran, Iran</p>
                 <ul>
                     <li>Supported server administration and cyber security operations in a major banking environment.
@@ -179,7 +204,9 @@
                 </ul>
             </div>
             <div class="cv-entry">
-                <h3>Sunny Mehr</h3>
+                <div class="entry-header">
+                    <h3>Sunny Mehr</h3>
+                </div>
                 <p class="cv-meta">Software Engineer | August 2016 - June 2019 | Tehran Province, Iran</p>
                 <ul>
                     <li>Designed and implemented software features during undergraduate study.</li>
@@ -192,20 +219,22 @@
         <section class="section" id="cv-education">
             <h2>Education</h2>
             <div class="cv-entry">
-                <h3>The University of Western Australia</h3>
-                <p class="cv-meta">Master's degree, Artificial Intelligence | February 2025 - December 2026</p>
+                <div class="entry-header">
+                    <h3>The University of Western Australia</h3>
+                </div>
+                <p class="cv-meta">Master's degree, Artificial Intelligence | February 2025 - In progress</p>
             </div>
             <div class="cv-entry">
-                <h3>Islamic Azad University, Science And Research Branch</h3>
+                <div class="entry-header">
+                    <h3>Islamic Azad University, Science And Research Branch</h3>
+                </div>
                 <p class="cv-meta">Master's degree, Information Technology | January 2017 - January 2022</p>
             </div>
             <div class="cv-entry">
-                <h3>Islamic Azad University Central Tehran Branch</h3>
+                <div class="entry-header">
+                    <h3>Islamic Azad University Central Tehran Branch</h3>
+                </div>
                 <p class="cv-meta">Bachelor's degree, Computer Software Engineering | October 2012 - January 2016</p>
-            </div>
-            <div class="cv-entry">
-                <h3>Tahereh High School</h3>
-                <p class="cv-meta">Diploma | 2004 - 2010</p>
             </div>
         </section>
 
@@ -219,6 +248,44 @@
                     <li>Explain programming concepts in an accessible, confidence-building way.</li>
                     <li>Support debugging and hands-on learning for young girls in technology.</li>
                 </ul>
+                <div class="row g-2 volunteer-gallery">
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/GPN%201.jfif"
+                                data-caption="Girls' Programming Network - Workshop moment"
+                        >
+                            <img src="assets/images/GPN%201.jfif" alt="Girls' Programming Network workshop photo 1"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/GPN%202.jfif"
+                                data-caption="Girls' Programming Network - Learning support"
+                        >
+                            <img src="assets/images/GPN%202.jfif" alt="Girls' Programming Network workshop photo 2"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/GNP%203.jfif"
+                                data-caption="Girls' Programming Network - Coding activity"
+                        >
+                            <img src="assets/images/GNP%203.jfif" alt="Girls' Programming Network workshop photo 3"/>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="cv-entry">
                 <h3>Conference Coordinator — Perth Global AI Community / AgentCon</h3>
@@ -227,6 +294,44 @@
                     <li>Supported scheduling, speakers, volunteers, and event logistics.</li>
                     <li>Helped create a strong learning and networking environment.</li>
                 </ul>
+                <div class="row g-2 volunteer-gallery">
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/AgentCon%201.jfif"
+                                data-caption="AgentCon - Conference coordination"
+                        >
+                            <img src="assets/images/AgentCon%201.jfif" alt="AgentCon photo 1"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/AgentCon%202.jfif"
+                                data-caption="AgentCon - Speaker support"
+                        >
+                            <img src="assets/images/AgentCon%202.jfif" alt="AgentCon photo 2"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/AgentCon%203.jfif"
+                                data-caption="AgentCon - Community networking"
+                        >
+                            <img src="assets/images/AgentCon%203.jfif" alt="AgentCon photo 3"/>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="cv-entry">
                 <h3>Conference Coordinator — UWA Data Institute (AI in Action)</h3>
@@ -235,6 +340,44 @@
                     <li>Assisted with event delivery and participant experience.</li>
                     <li>Contributed to collaborative knowledge sharing around AI.</li>
                 </ul>
+                <div class="row g-2 volunteer-gallery">
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/Data%20Institute%201.jfif"
+                                data-caption="AI in Action - Conference support"
+                        >
+                            <img src="assets/images/Data%20Institute%201.jfif" alt="UWA Data Institute photo 1"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/Data%20Institute%202.jfif"
+                                data-caption="AI in Action - Participant experience"
+                        >
+                            <img src="assets/images/Data%20Institute%202.jfif" alt="UWA Data Institute photo 2"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/Data%20Institute%203.jfif"
+                                data-caption="AI in Action - Knowledge sharing"
+                        >
+                            <img src="assets/images/Data%20Institute%203.jfif" alt="UWA Data Institute photo 3"/>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="cv-entry">
                 <h3>Microsoft Volunteer — DDD Perth</h3>
@@ -243,6 +386,44 @@
                     <li>Supported attendees, demonstrations, and on-site coordination.</li>
                     <li>Connected community engagement with professional outreach.</li>
                 </ul>
+                <div class="row g-2 volunteer-gallery">
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/DDD%201.jfif"
+                                data-caption="DDD Perth - Community support"
+                        >
+                            <img src="assets/images/DDD%201.jfif" alt="DDD Perth photo 1"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/DDD%202.jfif"
+                                data-caption="DDD Perth - Attendee engagement"
+                        >
+                            <img src="assets/images/DDD%202.jfif" alt="DDD Perth photo 2"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/DDD%203.jfif"
+                                data-caption="DDD Perth - Event participation"
+                        >
+                            <img src="assets/images/DDD%203.jfif" alt="DDD Perth photo 3"/>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="cv-entry">
                 <h3>O-Day Guild Student Centre Assistant — UWA Student Guild</h3>
@@ -251,8 +432,72 @@
                     <li>Supported student-facing activities and on-campus engagement.</li>
                     <li>Helped welcome and guide new students during O-Day.</li>
                 </ul>
+                <div class="row g-2 volunteer-gallery">
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/UWA%20Student%20Guild%201.jfif"
+                                data-caption="UWA Student Guild - O-Day support"
+                        >
+                            <img src="assets/images/UWA%20Student%20Guild%201.jfif" alt="UWA Student Guild photo 1"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/UWA%20Student%20Guild%202.jfif"
+                                data-caption="UWA Student Guild - Student engagement"
+                        >
+                            <img src="assets/images/UWA%20Student%20Guild%202.jfif" alt="UWA Student Guild photo 2"/>
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2">
+                        <button
+                                type="button"
+                                class="volunteer-thumb"
+                                data-bs-toggle="modal"
+                                data-bs-target="#volunteer-modal"
+                                data-image="assets/images/UWA%20Student%20Guild%203.jfif"
+                                data-caption="UWA Student Guild - Community welcome"
+                        >
+                            <img src="assets/images/UWA%20Student%20Guild%203.jfif" alt="UWA Student Guild photo 3"/>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <div
+                class="modal fade"
+                id="volunteer-modal"
+                tabindex="-1"
+                aria-labelledby="volunteer-modal-label"
+                aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content volunteer-modal">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="volunteer-modal-label">Volunteer Gallery</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <figure class="volunteer-modal-figure">
+                            <img id="volunteer-modal-image" src="" alt=""/>
+                            <figcaption id="volunteer-modal-caption" class="volunteer-modal-caption"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="section" id="cv-certifications">
             <h2>Certifications</h2>
@@ -274,29 +519,28 @@
         </section>
 
         <section class="section" id="cv-references">
-          <h2>References</h2>
-          <p>
-            The following sources informed this project. Replace placeholders with full citations following
-            UWA referencing guidance.
-          </p>
-          <ul class="cv-references">
-            <li>University of Western Australia. Referencing guidelines and style guides. [URL]</li>
-            <li>MDN Web Docs. HTML, CSS, and JavaScript reference documentation. [URL]</li>
-            <li>AI assistance (ChatGPT). Used for planning and drafting support. [Access date].</li>
-            <li>Quotable API. Used for quiz reward content on pass. [URL]</li>
-            <li>Type.fit Quotes API. Used as a reward fallback source. [URL]</li>
-          </ul>
+            <h2>References</h2>
+            <p>
+                The following sources informed this project. Replace placeholders with full citations following
+                UWA referencing guidance.
+            </p>
+            <ul class="cv-references">
+                <li>University of Western Australia. Referencing guidelines and style guides. [URL]</li>
+                <li>MDN Web Docs. HTML, CSS, and JavaScript reference documentation. [URL]</li>
+                <li>AI assistance (ChatGPT). Used for planning and drafting support. [Access date].</li>
+                <li>Quotable API. Used for quiz reward content on pass. [URL]</li>
+                <li>Type.fit Quotes API. Used as a reward fallback source. [URL]</li>
+            </ul>
         </section>
-      </div>
-    </main>
+    </div>
+</main>
 
 <footer class="site-footer">
     <div class="container footer-grid">
         <p class="footer-note">
-            SkillTrack Learning Portfolio is a unified learning product. References and source
-            acknowledgements appear on the CV page.
+            SkillTrack Learning Portfolio is a unified learning product.
         </p>
-        <p>Course project scaffold - Phase 12</p>
+        <p><strong>Farahnaz Abdi</strong> Course Assignment</p>
     </div>
 </footer>
 </body>

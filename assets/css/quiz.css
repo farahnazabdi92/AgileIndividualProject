@@ -1,155 +1,155 @@
 .quiz-instructions {
-  margin: var(--space-2) 0 0;
-  padding-left: 1.25rem;
+    margin: var(--space-2) 0 0;
+    padding-left: 1.25rem;
 }
 
 .question-list {
-  display: grid;
-  gap: var(--space-3);
+    display: grid;
+    gap: var(--space-3);
 }
 
 .question-card {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: var(--space-3);
-  background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3);
+    background: #fff;
 }
 
 .question-card.is-missing {
-  border-color: var(--color-warning);
-  box-shadow: 0 0 0 2px rgba(178, 75, 63, 0.12);
+    border-color: var(--color-warning);
+    box-shadow: 0 0 0 2px rgba(178, 75, 63, 0.12);
 }
 
 .question-card legend {
-  font-weight: 600;
-  margin-bottom: var(--space-2);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
 }
 
 .option-list {
-  display: grid;
-  gap: var(--space-2);
+    display: grid;
+    gap: var(--space-2);
 }
 
 .option-row {
-  margin: 0;
+    margin: 0;
 }
 
 .form-check-input {
-  border-color: var(--color-border);
+    border-color: var(--color-border);
 }
 
 .form-check-input:checked {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent-strong);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent-strong);
 }
 
 .form-check-input:focus {
-  border-color: var(--color-accent-strong);
-  box-shadow: 0 0 0 0.2rem rgba(176, 74, 122, 0.2);
+    border-color: var(--color-accent-strong);
+    box-shadow: 0 0 0 0.2rem rgba(176, 74, 122, 0.2);
 }
 
 .form-check-label {
-  color: var(--color-ink);
+    color: var(--color-ink);
 }
 
 .validation-message {
-  padding: var(--space-3);
-  border-radius: var(--radius-sm);
-  background: var(--color-warning-bg);
-  border: 1px solid var(--color-warning-border);
-  color: var(--color-warning);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    background: var(--color-warning-bg);
+    border: 1px solid var(--color-warning-border);
+    color: var(--color-warning);
 }
 
 .validation-message.is-hidden {
-  display: none;
+    display: none;
 }
 
 .validation-list {
-  margin: var(--space-2) 0 0;
-  padding-left: 1.25rem;
+    margin: var(--space-2) 0 0;
+    padding-left: 1.25rem;
 }
 
 .controls-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
 }
 
 .ghost-btn {
-  padding: 0.65rem 1.1rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
-  background: transparent;
-  font-weight: 600;
-  cursor: pointer;
+    padding: 0.65rem 1.1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .results-box,
 .reward-box {
-  padding: var(--space-3);
-  border-radius: var(--radius-sm);
-  background: var(--color-bg-top);
-  border: 1px solid var(--color-border);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-top);
+    border: 1px solid var(--color-border);
 }
 
 .results-box.is-celebrate {
-  border-color: rgba(30, 111, 92, 0.6);
-  box-shadow: 0 0 0 3px rgba(30, 111, 92, 0.12);
+    border-color: rgba(30, 111, 92, 0.6);
+    box-shadow: 0 0 0 3px rgba(30, 111, 92, 0.12);
 }
 
 .celebration-canvas {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 50;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
 }
 
 .reward-source {
-  margin-top: var(--space-1);
-  color: var(--color-muted);
-  font-size: 0.9rem;
+    margin-top: var(--space-1);
+    color: var(--color-muted);
+    font-size: 0.9rem;
 }
 
 .result-status {
-  font-weight: 700;
-  margin-top: var(--space-2);
+    font-weight: 700;
+    margin-top: var(--space-2);
 }
 
 .result-status.pass {
-  color: var(--color-success);
+    color: var(--color-success);
 }
 
 .result-status.fail {
-  color: var(--color-warning);
+    color: var(--color-warning);
 }
 
 .system-message {
-  margin: 0;
-  color: var(--color-muted);
+    margin: 0;
+    color: var(--color-muted);
 }
 
 .history-actions {
-  margin-bottom: var(--space-2);
+    margin-bottom: var(--space-2);
 }
 
 .history-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-2);
 }
 
 .history-item {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: var(--space-2) var(--space-3);
-  background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+    background: #fff;
 }
 
 .history-item strong {
-  display: inline-block;
-  margin-right: var(--space-1);
+    display: inline-block;
+    margin-right: var(--space-1);
 }

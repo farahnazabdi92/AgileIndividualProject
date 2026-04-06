@@ -1,30 +1,30 @@
 .reflection-block {
-  display: grid;
-  gap: var(--space-2);
+    display: grid;
+    gap: var(--space-2);
 }
 
 .reflection-grid {
-  display: grid;
-  gap: var(--space-3);
+    display: grid;
+    gap: var(--space-3);
 }
 
 .reflection-grid h4 {
-  margin: 0 0 var(--space-1);
+    margin: 0 0 var(--space-1);
 }
 
 .reflection-note {
-  font-weight: 600;
-  color: var(--color-accent-strong);
-  margin-top: var(--space-2);
+    font-weight: 600;
+    color: var(--color-accent-strong);
+    margin-top: var(--space-2);
 }
 
 .reflection-risk {
-  margin-top: var(--space-2);
-  color: var(--color-warning);
+    margin-top: var(--space-2);
+    color: var(--color-warning);
 }
 
 @media (min-width: 800px) {
-  .reflection-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    .reflection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
