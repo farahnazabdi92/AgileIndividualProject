@@ -204,6 +204,103 @@ button.addEventListener("click", () =&gt; {
             </p>
         </section>
 
+        <section class="section" id="dom-sandbox">
+            <h2>Live DOM Sandbox</h2>
+            <p>
+                Use this guided sandbox to edit structure, style, and behavior in one place. Every control updates
+                the preview immediately so you can see how HTML, CSS, and JavaScript work together.
+            </p>
+
+            <div class="dom-sandbox-grid row g-3">
+                <div class="col-12 col-xl-5">
+                    <div class="sandbox-panel">
+                        <h3>Controls</h3>
+                        <p class="caption">Change one setting at a time and watch the live preview update.</p>
+
+                        <div class="sandbox-control-group">
+                            <label for="sandbox-semantic-select">Semantic container</label>
+                            <select id="sandbox-semantic-select" class="form-select">
+                                <option value="article">article</option>
+                                <option value="section">section</option>
+                                <option value="aside">aside</option>
+                            </select>
+                        </div>
+
+                        <div class="sandbox-control-group">
+                            <label for="sandbox-title-input">Card title</label>
+                            <input id="sandbox-title-input" class="form-control" type="text" value="DOM Practice Card"/>
+                        </div>
+
+                        <div class="sandbox-control-group">
+                            <label for="sandbox-text-input">Card text</label>
+                            <textarea id="sandbox-text-input" class="form-control" rows="3">This preview starts with semantic HTML, then CSS and JavaScript update it in real time.</textarea>
+                        </div>
+
+                        <div class="sandbox-control-group">
+                            <label for="sandbox-style-select">Style class</label>
+                            <select id="sandbox-style-select" class="form-select">
+                                <option value="soft">Soft card</option>
+                                <option value="focus">Focus card</option>
+                                <option value="contrast">Contrast card</option>
+                            </select>
+                        </div>
+
+                        <div class="sandbox-control-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="sandbox-list-toggle" checked/>
+                                <label class="form-check-label" for="sandbox-list-toggle">Show checklist items</label>
+                            </div>
+                        </div>
+
+                        <div class="sandbox-control-group">
+                            <label for="sandbox-item-input">Add one checklist point</label>
+                            <div class="sandbox-inline-controls">
+                                <input id="sandbox-item-input" class="form-control" type="text" placeholder="e.g., Use semantic tags first"/>
+                                <button id="sandbox-add-item" class="cta cta-secondary" type="button">Add</button>
+                            </div>
+                            <div class="sandbox-inline-controls">
+                                <button id="sandbox-remove-item" class="cta cta-ghost" type="button">Remove Last</button>
+                            </div>
+                            <p id="sandbox-control-status" class="sandbox-control-status" aria-live="polite"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-7">
+                    <div class="sandbox-panel">
+                        <h3>Live Preview</h3>
+                        <div id="sandbox-preview-shell">
+                            <article id="sandbox-structure" class="sandbox-preview-card sandbox-style-soft">
+                                <h4 id="sandbox-preview-title">DOM Practice Card</h4>
+                                <p id="sandbox-preview-text">
+                                    This preview starts with semantic HTML, then CSS and JavaScript update it in real time.
+                                </p>
+                                <ul id="sandbox-preview-list">
+                                    <li>HTML defines the elements and meaning.</li>
+                                    <li>CSS classes control the visual style.</li>
+                                    <li>JavaScript events update content and classes.</li>
+                                </ul>
+                                <button id="sandbox-action-btn" class="cta cta-secondary" type="button">Run JS Action</button>
+                                <p id="sandbox-action-status" class="sandbox-action-status" aria-live="polite">
+                                    Action status: waiting for interaction.
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="sandbox-output-wrap">
+                            <h4>Current DOM Snapshot</h4>
+                            <pre id="sandbox-output" class="code-block sandbox-output"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mini-recap">
+                This sandbox keeps the same fundamentals as the quiz: semantic elements, class-based styling, and
+                event-driven DOM updates.
+            </p>
+        </section>
+
         <section class="section" id="best-practices">
             <h2>Best-Practice Rationale</h2>
             <p>
@@ -247,9 +344,9 @@ button.addEventListener("click", () =&gt; {
 <footer class="site-footer">
     <div class="container footer-grid">
         <p class="footer-note">
-            SkillTrack Learning Portfolio is a unified learning product.
+            The University of Western Australia
         </p>
-        <p><strong>Farahnaz Abdi</strong> Course Assignment</p>
+        <p><strong>Farahnaz Abdi</strong> Agile Web Development</p>
     </div>
 </footer>
 </body>
