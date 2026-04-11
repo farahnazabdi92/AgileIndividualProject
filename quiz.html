@@ -4,6 +4,22 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Quiz | SkillTrack Learning Portfolio</title>
+    <!-- Apply saved/system theme before styles load to avoid visual theme flashing. -->
+    <script>
+        (() => {
+            const KEY = "skilltrack.theme";
+            let stored = null;
+            try {
+                stored = localStorage.getItem(KEY);
+            } catch (error) {
+                stored = null;
+            }
+            const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            const theme = stored === "dark" || stored === "light" ? stored : (systemDark ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+            document.documentElement.setAttribute("data-bs-theme", theme);
+        })();
+    </script>
     <link rel="stylesheet" href="assets/libraries/bootstrap-5.3.8-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/site.css"/>
     <link rel="stylesheet" href="assets/css/quiz.css"/>
@@ -14,6 +30,7 @@
 <body data-page="quiz">
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- Shared product header: brand, page navigation, and global theme toggle. -->
 <header class="site-header">
     <div class="container px-4">
         <div class="brand">
@@ -26,11 +43,16 @@
             <a class="nav-link" href="ai-reflection.html" data-page="ai-reflection">AI Reflection</a>
             <a class="nav-link" href="cv.html" data-page="cv">CV</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="theme-toggle-text">Dark mode</span>
+        </button>
     </div>
 </header>
 
 <main id="main" class="site-main">
     <div class="container">
+        <!-- Quiz page intro and assessment context. -->
         <header class="page-header">
             <h1 class="page-title">Quiz</h1>
             <p class="page-lede">
@@ -38,6 +60,7 @@
             </p>
         </header>
 
+        <!-- Instructional context and expectations before answering. -->
         <section class="section" id="quiz-intro">
             <h2>Quiz Instructions</h2>
             <p>
@@ -58,6 +81,7 @@
             </p>
         </section>
 
+        <!-- Main quiz form: dynamic question rendering, validation, and submission controls. -->
         <form id="quiz-form" novalidate>
             <section class="section" id="quiz-questions">
                 <h2>Questions</h2>
@@ -82,6 +106,7 @@
             </section>
         </form>
 
+        <!-- Post-submit feedback areas shown without page reload. -->
         <div class="container p-0">
             <div class="row g-lg-4">
                 <div class="col-lg-6">
@@ -103,6 +128,7 @@
             </div>
         </div>
 
+        <!-- Persistent attempt history loaded from localStorage. -->
         <section class="section" id="quiz-history">
             <h2>Attempt History</h2>
             <div class="history-actions">
@@ -114,6 +140,7 @@
     </div>
 </main>
 
+<!-- Shared footer identity and course attribution. -->
 <footer class="site-footer">
     <div class="container footer-grid">
         <p class="footer-note">

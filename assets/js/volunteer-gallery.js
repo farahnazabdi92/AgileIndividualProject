@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Shared volunteer photo modal: populate image/caption from clicked thumbnail data attributes.
   const modal = document.querySelector("#volunteer-modal");
   const modalImage = document.querySelector("#volunteer-modal-image");
   const modalCaption = document.querySelector("#volunteer-modal-caption");

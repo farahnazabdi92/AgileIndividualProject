@@ -1,3 +1,4 @@
+// Demo 1: switch CSS classes to show presentation changes over fixed HTML content.
 const initStyleToggleDemo = () => {
   const demoCard = document.querySelector("#style-demo-card");
   const demoStatus = document.querySelector(".demo-status");
@@ -55,7 +56,9 @@ const initStyleToggleDemo = () => {
   updateStyle("default");
 };
 
+// Demo 2: guided DOM sandbox that maps directly to tutorial + quiz fundamentals.
 const initDomSandbox = () => {
+  // Control inputs.
   const semanticSelect = document.querySelector("#sandbox-semantic-select");
   const titleInput = document.querySelector("#sandbox-title-input");
   const textInput = document.querySelector("#sandbox-text-input");
@@ -66,6 +69,7 @@ const initDomSandbox = () => {
   const removeItemButton = document.querySelector("#sandbox-remove-item");
   const controlStatus = document.querySelector("#sandbox-control-status");
 
+  // Live preview targets.
   const previewShell = document.querySelector("#sandbox-preview-shell");
   const previewTitle = document.querySelector("#sandbox-preview-title");
   const previewText = document.querySelector("#sandbox-preview-text");
@@ -107,6 +111,7 @@ const initDomSandbox = () => {
   let actionCount = 0;
 
   const renderSnapshot = () => {
+    // Show a readable DOM summary so learners can connect UI changes to structure.
     const tagName = structure.tagName.toLowerCase();
     const title = previewTitle.textContent.trim();
     const text = previewText.textContent.trim();
@@ -141,6 +146,7 @@ const initDomSandbox = () => {
     next.className = structure.className;
 
     while (structure.firstChild) {
+      // Preserve child content while swapping semantic container type.
       next.appendChild(structure.firstChild);
     }
 
@@ -160,11 +166,13 @@ const initDomSandbox = () => {
   };
 
   semanticSelect.addEventListener("change", () => {
+    // Semantic element update (HTML concept).
     setSemanticTag(semanticSelect.value);
     renderSnapshot();
   });
 
   titleInput.addEventListener("input", () => {
+    // Text content update (DOM manipulation concept).
     const nextTitle = titleInput.value.trim();
     previewTitle.textContent = nextTitle || "DOM Practice Card";
     renderSnapshot();
@@ -179,11 +187,13 @@ const initDomSandbox = () => {
   });
 
   styleSelect.addEventListener("change", () => {
+    // Class update (CSS selector/class concept).
     setStyleClass(styleSelect.value);
     renderSnapshot();
   });
 
   listToggle.addEventListener("change", () => {
+    // Attribute-driven visibility change.
     previewList.hidden = !listToggle.checked;
     renderSnapshot();
   });
@@ -215,6 +225,7 @@ const initDomSandbox = () => {
   });
 
   actionButton.addEventListener("click", () => {
+    // Event handler example for the JavaScript fundamentals section.
     actionCount += 1;
     actionStatus.textContent = `Action status: JavaScript click handler ran ${actionCount} time${actionCount === 1 ? "" : "s"}.`;
     structure.classList.toggle("sandbox-is-active");
@@ -227,6 +238,7 @@ const initDomSandbox = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Keep both demos independent so one failure does not break the other.
   initStyleToggleDemo();
   initDomSandbox();
 });

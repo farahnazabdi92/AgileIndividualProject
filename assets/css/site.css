@@ -1,20 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@400;600;700&family=Source+Code+Pro:wght@400;500&display=swap");
 
+/* Global design tokens for light mode. */
 :root {
+    color-scheme: light;
+    --accent-rgb: 176, 74, 122;
+    --success-rgb: 47, 125, 107;
+    --warning-rgb: 178, 75, 63;
+
     --color-ink: #2b1f24;
     --color-muted: #6b5561;
     --color-surface: #ffffff;
+    --color-surface-soft: #fff7fb;
+    --color-surface-soft-strong: #fff2f8;
     --color-border: #e7d6df;
     --color-accent: #b04a7a;
     --color-accent-strong: #8a2e5f;
     --color-highlight: #d28aa8;
     --color-bg-top: #fbf4f7;
     --color-bg-bottom: #f1e7ee;
+    --color-header-top: #f7e9f1;
+    --color-header-bottom: #fdeef6;
+    --color-footer-bg: #f7eef3;
+    --color-control-bg: #ffffff;
+    --color-code-bg: #0f1c24;
+    --color-code-text: #f4f8fb;
     --color-success: #2f7d6b;
     --color-success-bg: #e5f2ee;
     --color-warning: #b24b3f;
     --color-warning-bg: #fae9e6;
     --color-warning-border: #f0c7c0;
+    --color-focus-ring: rgba(var(--accent-rgb), 0.25);
+    --shadow-soft: 0 10px 30px rgba(27, 43, 52, 0.08);
 
     --space-1: 0.5rem;
     --space-2: 0.75rem;
@@ -25,10 +41,42 @@
 
     --radius-sm: 6px;
     --radius-md: 12px;
-
-    --shadow-soft: 0 10px 30px rgba(27, 43, 52, 0.08);
 }
 
+/* Dark mode token overrides; same brand identity on darker surfaces. */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --accent-rgb: 215, 132, 174;
+    --success-rgb: 86, 185, 151;
+    --warning-rgb: 219, 120, 104;
+
+    --color-ink: #f8edf3;
+    --color-muted: #ccb6c2;
+    --color-surface: #201821;
+    --color-surface-soft: #291f2a;
+    --color-surface-soft-strong: #322636;
+    --color-border: #56424f;
+    --color-accent: #d784ae;
+    --color-accent-strong: #e8a3c7;
+    --color-highlight: #f0b5d0;
+    --color-bg-top: #120d13;
+    --color-bg-bottom: #1a131b;
+    --color-header-top: #1d151f;
+    --color-header-bottom: #281a29;
+    --color-footer-bg: #1c141d;
+    --color-control-bg: #291f2a;
+    --color-code-bg: #0f1117;
+    --color-code-text: #f4f4f9;
+    --color-success: #6fd5b0;
+    --color-success-bg: rgba(var(--success-rgb), 0.18);
+    --color-warning: #f0a093;
+    --color-warning-bg: rgba(var(--warning-rgb), 0.2);
+    --color-warning-border: rgba(var(--warning-rgb), 0.45);
+    --color-focus-ring: rgba(var(--accent-rgb), 0.35);
+    --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+/* Base element behavior and document defaults. */
 *,
 *::before,
 *::after {
@@ -77,8 +125,9 @@ img {
     padding-right: 1.25rem;
 }
 
+/* Shared header shell, branding, navigation, and theme toggle. */
 .site-header {
-    background: linear-gradient(135deg, #f7e9f1 0%, #fdeef6 100%);
+    background: linear-gradient(135deg, var(--color-header-top) 0%, var(--color-header-bottom) 100%);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -87,7 +136,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: var(--space-3);
 }
 
@@ -114,6 +163,7 @@ img {
     display: flex;
     gap: var(--space-2);
     flex-wrap: wrap;
+    margin-left: auto;
 }
 
 .nav-link {
@@ -127,8 +177,8 @@ img {
 
 .nav-link:hover,
 .nav-link:focus {
-    background: rgba(30, 111, 92, 0.1);
-    border-color: rgba(30, 111, 92, 0.2);
+    background: rgba(var(--accent-rgb), 0.12);
+    border-color: rgba(var(--accent-rgb), 0.28);
 }
 
 .nav-link.is-active {
@@ -137,6 +187,51 @@ img {
     border-color: var(--color-accent-strong);
 }
 
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.2rem;
+    padding: 0.38rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: var(--color-control-bg);
+    color: var(--color-ink);
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem var(--color-focus-ring);
+}
+
+.theme-toggle-icon {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.theme-toggle.is-dark .theme-toggle-icon::before {
+    content: "☀";
+}
+
+.theme-toggle .theme-toggle-icon::before {
+    content: "☾";
+}
+
+.theme-toggle-text {
+    font-size: 0.88rem;
+    white-space: nowrap;
+}
+
+/* Shared page scaffolding and reusable section/card treatment. */
 .site-main {
     padding: var(--space-6) 0;
 }
@@ -213,13 +308,14 @@ img {
 .cta:hover,
 .cta:focus {
     transform: translateY(-1px);
-    box-shadow: 0 8px 18px rgba(30, 111, 92, 0.2);
+    box-shadow: 0 8px 18px rgba(var(--accent-rgb), 0.25);
 }
 
+/* Shared footer styling and university mark alignment. */
 .site-footer {
     padding: var(--space-5) 0;
     border-top: 1px solid var(--color-border);
-    background: #f7eef3;
+    background: var(--color-footer-bg);
 }
 
 .footer-grid {
@@ -234,21 +330,53 @@ img {
 
 .footer-note {
     max-width: 520px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
 }
 
+.footer-uwa-logo {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    border: 0;
+    box-shadow: none;
+    flex: 0 0 auto;
+}
+
+/* Small-screen header reflow: brand + toggle row, nav row below. */
 @media (max-width: 760px) {
     .site-header .container {
-        flex-direction: column;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "brand toggle"
+            "nav nav";
+        align-items: start;
+        row-gap: var(--space-2);
+        column-gap: var(--space-2);
+    }
+
+    .brand {
+        grid-area: brand;
+        min-width: 0;
     }
 
     .site-nav {
+        grid-area: nav;
         width: 100%;
+        margin-left: 0;
     }
 
     .nav-link {
         flex: 1 1 auto;
         text-align: center;
+    }
+
+    .theme-toggle {
+        grid-area: toggle;
+        justify-self: end;
+        align-self: start;
     }
 
     .footer-grid {

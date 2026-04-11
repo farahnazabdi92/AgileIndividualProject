@@ -4,6 +4,22 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>AI Reflection | SkillTrack Learning Portfolio</title>
+    <!-- Apply saved/system theme before styles load to avoid visual theme flashing. -->
+    <script>
+        (() => {
+            const KEY = "skilltrack.theme";
+            let stored = null;
+            try {
+                stored = localStorage.getItem(KEY);
+            } catch (error) {
+                stored = null;
+            }
+            const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            const theme = stored === "dark" || stored === "light" ? stored : (systemDark ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+            document.documentElement.setAttribute("data-bs-theme", theme);
+        })();
+    </script>
     <link rel="stylesheet" href="assets/libraries/bootstrap-5.3.8-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/site.css"/>
     <link rel="stylesheet" href="assets/css/ai-reflection.css"/>
@@ -13,6 +29,7 @@
 <body data-page="ai-reflection">
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- Shared product header: brand, page navigation, and global theme toggle. -->
 <header class="site-header">
     <div class="container px-4">
         <div class="brand">
@@ -25,11 +42,16 @@
             <a class="nav-link" href="ai-reflection.html" data-page="ai-reflection">AI Reflection</a>
             <a class="nav-link" href="cv.html" data-page="cv">CV</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="theme-toggle-text">Dark mode</span>
+        </button>
     </div>
 </header>
 
 <main id="main" class="site-main">
     <div class="container">
+        <!-- Reflection intro: frames purpose, scope, and evidence-first approach. -->
         <header class="page-header">
             <h1 class="page-title">AI Reflection Log</h1>
             <p class="page-lede">
@@ -51,6 +73,7 @@
             </p>
         </section>
 
+        <!-- Use-case series documents how each AI tool supported a distinct responsibility. -->
         <section class="section" id="reflection-use-case-1">
             <h2>AI Use Case 1</h2>
             <div class="reflection-block">
@@ -162,6 +185,7 @@
             </div>
         </section>
 
+        <!-- Phase workflow section shows controlled, stepwise AI-assisted delivery. -->
         <section class="section" id="reflection-phase-workflow">
             <h2>12-Phase AI-Assisted Development Workflow</h2>
             <p>
@@ -171,6 +195,7 @@
                 with the assignment requirements.
             </p>
 
+            <!-- Accordion keeps long phase prompts readable while preserving full context on demand. -->
             <div class="accordion reflection-accordion" id="phasePromptAccordion">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="phase1PromptHeading">
@@ -2676,6 +2701,7 @@ A strong Phase 12 result should leave the project:
             </div>
         </section>
 
+        <!-- Review cycle clarifies human validation between each AI-assisted phase. -->
         <section class="section" id="reflection-review-cycle">
             <h2>Review, Validation, and Acceptance-Criteria Checking</h2>
             <div class="reflection-block">
@@ -2715,6 +2741,7 @@ A strong Phase 12 result should leave the project:
             </div>
         </section>
 
+        <!-- Critical evaluation captures reliability, risks, and ethical responsibilities. -->
         <section class="section" id="reflection-evaluation">
             <h2>Critical Evaluation</h2>
             <div class="reflection-block">
@@ -2741,6 +2768,7 @@ A strong Phase 12 result should leave the project:
     </div>
 </main>
 
+<!-- Shared footer identity and course attribution. -->
 <footer class="site-footer">
     <div class="container footer-grid">
         <p class="footer-note">

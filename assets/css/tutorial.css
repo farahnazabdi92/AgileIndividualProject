@@ -1,3 +1,53 @@
+/* Tutorial-specific color tokens layered on top of shared site tokens. */
+:root {
+    --tutorial-panel-bg: #fff7fb;
+    --tutorial-demo-default-bg: #fff6fa;
+    --tutorial-demo-default-border: #edd3e0;
+    --tutorial-demo-warm-bg: #ffe4ee;
+    --tutorial-demo-warm-border: #f2b7cb;
+    --tutorial-demo-cool-bg: #f1e8f6;
+    --tutorial-demo-cool-border: #c9b1dd;
+    --tutorial-demo-bold-bg: #f7d9e7;
+    --tutorial-demo-bold-border: #d88cb4;
+    --tutorial-sandbox-panel-bg: #fffafb;
+    --tutorial-input-border: #e3c7d6;
+    --tutorial-cta-soft-bg: #fdf1f7;
+    --tutorial-ghost-border: #d8b3c7;
+    --tutorial-preview-border: #e9cade;
+    --tutorial-sandbox-soft-bg: #fff6fa;
+    --tutorial-sandbox-soft-border: #e9cade;
+    --tutorial-sandbox-focus-bg: #fdeef6;
+    --tutorial-sandbox-focus-border: #cf7ea8;
+    --tutorial-sandbox-contrast-bg: #f5edf8;
+    --tutorial-sandbox-contrast-border: #b590cc;
+    --tutorial-active-outline: rgba(var(--accent-rgb), 0.35);
+}
+
+:root[data-theme="dark"] {
+    --tutorial-panel-bg: #271d28;
+    --tutorial-demo-default-bg: #2a1f2b;
+    --tutorial-demo-default-border: #6a5060;
+    --tutorial-demo-warm-bg: #352432;
+    --tutorial-demo-warm-border: #a56687;
+    --tutorial-demo-cool-bg: #2b2234;
+    --tutorial-demo-cool-border: #7b679c;
+    --tutorial-demo-bold-bg: #3a2834;
+    --tutorial-demo-bold-border: #b17494;
+    --tutorial-sandbox-panel-bg: #261e27;
+    --tutorial-input-border: #755a6a;
+    --tutorial-cta-soft-bg: #322434;
+    --tutorial-ghost-border: #7a6070;
+    --tutorial-preview-border: #745768;
+    --tutorial-sandbox-soft-bg: #2b212c;
+    --tutorial-sandbox-soft-border: #745768;
+    --tutorial-sandbox-focus-bg: #322235;
+    --tutorial-sandbox-focus-border: #c983ab;
+    --tutorial-sandbox-contrast-bg: #2c2538;
+    --tutorial-sandbox-contrast-border: #9b80bf;
+    --tutorial-active-outline: rgba(var(--accent-rgb), 0.5);
+}
+
+/* Learning content helpers. */
 .objectives-list {
     margin: var(--space-2) 0 0;
     padding-left: 1.25rem;
@@ -12,12 +62,13 @@
     margin-top: var(--space-3);
 }
 
+/* Reusable code snippet surface for tutorial and sandbox output. */
 .code-block {
     margin: var(--space-2) 0 0;
     padding: var(--space-3);
     border-radius: var(--radius-sm);
-    background: #0f1c24;
-    color: #f4f8fb;
+    background: var(--color-code-bg);
+    color: var(--color-code-text);
     overflow-x: auto;
     font-size: 0.95rem;
 }
@@ -38,6 +89,7 @@
     color: var(--color-accent-strong);
 }
 
+/* Demo 1: style toggle card and control states. */
 .demo-area {
     margin-top: var(--space-3);
     display: grid;
@@ -48,7 +100,7 @@
     padding: var(--space-4);
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
-    background: #fff7fb;
+    background: var(--tutorial-panel-bg);
     transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -73,7 +125,8 @@
     padding: 0.5rem 1rem;
     border-radius: 999px;
     border: 1px solid var(--color-border);
-    background: #fff;
+    background: var(--color-control-bg);
+    color: var(--color-ink);
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -92,32 +145,33 @@
 }
 
 .demo-style-default {
-    background: #fff6fa;
-    border-color: #edd3e0;
+    background: var(--tutorial-demo-default-bg);
+    border-color: var(--tutorial-demo-default-border);
 }
 
 .demo-style-warm {
-    background: #ffe4ee;
-    border-color: #f2b7cb;
-    box-shadow: 0 12px 24px rgba(176, 74, 122, 0.18);
+    background: var(--tutorial-demo-warm-bg);
+    border-color: var(--tutorial-demo-warm-border);
+    box-shadow: 0 12px 24px rgba(var(--accent-rgb), 0.18);
 }
 
 .demo-style-cool {
-    background: #f1e8f6;
-    border-color: #c9b1dd;
-    box-shadow: 0 12px 24px rgba(138, 46, 95, 0.18);
+    background: var(--tutorial-demo-cool-bg);
+    border-color: var(--tutorial-demo-cool-border);
+    box-shadow: 0 12px 24px rgba(var(--accent-rgb), 0.2);
 }
 
 .demo-style-bold {
-    background: #f7d9e7;
-    border-color: #d88cb4;
-    box-shadow: 0 12px 24px rgba(176, 74, 122, 0.2);
+    background: var(--tutorial-demo-bold-bg);
+    border-color: var(--tutorial-demo-bold-border);
+    box-shadow: 0 12px 24px rgba(var(--accent-rgb), 0.22);
 }
 
+/* Demo 2: DOM sandbox controls, preview card, and output panel. */
 .sandbox-panel {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    background: #fffafb;
+    background: var(--tutorial-sandbox-panel-bg);
     padding: var(--space-3);
     height: 100%;
     display: grid;
@@ -141,15 +195,16 @@
 
 #dom-sandbox .form-control,
 #dom-sandbox .form-select {
-    border-color: #e3c7d6;
-    background-color: #fff;
+    border-color: var(--tutorial-input-border);
+    background-color: var(--color-control-bg);
+    color: var(--color-ink);
 }
 
 #dom-sandbox .form-control:focus,
 #dom-sandbox .form-select:focus,
 #dom-sandbox .form-check-input:focus {
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 0.2rem rgba(176, 74, 122, 0.18);
+    box-shadow: 0 0 0 0.2rem var(--color-focus-ring);
 }
 
 #dom-sandbox .form-check-label {
@@ -172,7 +227,7 @@
 }
 
 #dom-sandbox .cta-secondary {
-    background: #fff;
+    background: var(--color-control-bg);
     color: var(--color-accent-strong);
     border: 1px solid var(--color-accent);
     box-shadow: none;
@@ -180,14 +235,14 @@
 
 #dom-sandbox .cta-secondary:hover,
 #dom-sandbox .cta-secondary:focus {
-    background: #fdf1f7;
+    background: var(--tutorial-cta-soft-bg);
     color: var(--color-accent-strong);
 }
 
 #dom-sandbox .cta-ghost {
     background: transparent;
     color: var(--color-muted);
-    border: 1px dashed #d8b3c7;
+    border: 1px dashed var(--tutorial-ghost-border);
     box-shadow: none;
 }
 
@@ -209,7 +264,7 @@
 }
 
 .sandbox-preview-card {
-    border: 1px solid #e9cade;
+    border: 1px solid var(--tutorial-preview-border);
     border-radius: var(--radius-sm);
     padding: var(--space-3);
     transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
@@ -229,24 +284,24 @@
 }
 
 .sandbox-style-soft {
-    background: #fff6fa;
-    border-color: #e9cade;
+    background: var(--tutorial-sandbox-soft-bg);
+    border-color: var(--tutorial-sandbox-soft-border);
 }
 
 .sandbox-style-focus {
-    background: #fdeef6;
-    border-color: #cf7ea8;
-    box-shadow: 0 10px 22px rgba(176, 74, 122, 0.16);
+    background: var(--tutorial-sandbox-focus-bg);
+    border-color: var(--tutorial-sandbox-focus-border);
+    box-shadow: 0 10px 22px rgba(var(--accent-rgb), 0.18);
 }
 
 .sandbox-style-contrast {
-    background: #f5edf8;
-    border-color: #b590cc;
-    box-shadow: 0 10px 22px rgba(138, 46, 95, 0.16);
+    background: var(--tutorial-sandbox-contrast-bg);
+    border-color: var(--tutorial-sandbox-contrast-border);
+    box-shadow: 0 10px 22px rgba(var(--accent-rgb), 0.18);
 }
 
 .sandbox-is-active {
-    outline: 2px solid rgba(176, 74, 122, 0.35);
+    outline: 2px solid var(--tutorial-active-outline);
     outline-offset: 2px;
 }
 
@@ -270,6 +325,7 @@
     overflow-y: auto;
 }
 
+/* Keep sandbox controls readable when space is tight. */
 @media (max-width: 768px) {
     .sandbox-panel {
         padding: var(--space-3);

@@ -1,3 +1,17 @@
+/* CV page-specific image/surface tokens. */
+:root {
+    --cv-photo-bg: #f3e7ef;
+    --cv-logo-bg: #ffffff;
+    --cv-thumb-bg: #ffffff;
+}
+
+:root[data-theme="dark"] {
+    --cv-photo-bg: #2b212d;
+    --cv-logo-bg: #2b212d;
+    --cv-thumb-bg: #281f29;
+}
+
+/* Profile header and contact block. */
 .cv-profile {
     display: grid;
     gap: var(--space-3);
@@ -9,7 +23,7 @@
     height: 140px;
     border-radius: 50%;
     border: 2px solid var(--color-border);
-    background: #f3e7ef;
+    background: var(--cv-photo-bg);
     object-fit: cover;
 }
 
@@ -37,6 +51,7 @@
     padding-left: 1.25rem;
 }
 
+/* Experience, education, and volunteering entry presentation. */
 .cv-entry {
   margin-top: var(--space-3);
 }
@@ -57,11 +72,11 @@
   height: 42px;
   border-radius: 10px;
   border: 1px solid var(--color-border);
-  background: #fff;
+  background: var(--cv-logo-bg);
   padding: 4px;
   object-fit: contain;
   flex: 0 0 auto;
-  box-shadow: 0 6px 12px rgba(176, 74, 122, 0.12);
+  box-shadow: 0 6px 12px rgba(var(--accent-rgb), 0.18);
 }
 
 
@@ -76,6 +91,7 @@
     color: var(--color-muted);
 }
 
+/* Volunteer thumbnail gallery and modal presentation. */
 .volunteer-gallery {
     margin-top: var(--space-2);
 }
@@ -85,7 +101,7 @@
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     padding: 0;
-    background: #fff;
+    background: var(--cv-thumb-bg);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -102,7 +118,7 @@
 .volunteer-thumb:focus {
     transform: translateY(-2px);
     border-color: var(--color-accent);
-    box-shadow: 0 8px 18px rgba(176, 74, 122, 0.15);
+    box-shadow: 0 8px 18px rgba(var(--accent-rgb), 0.22);
 }
 
 .volunteer-modal {
@@ -130,6 +146,7 @@
     color: var(--color-muted);
 }
 
+/* Two-column profile layout from tablet widths upward. */
 @media (min-width: 720px) {
     .cv-profile {
         grid-template-columns: 160px 1fr;

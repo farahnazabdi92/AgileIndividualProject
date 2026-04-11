@@ -1,3 +1,17 @@
+/* Reflection page accordion and prompt-surface tokens. */
+:root {
+    --reflection-accordion-button-bg: #fdf0f6;
+    --reflection-accordion-body-bg: #fffafc;
+    --reflection-prompt-bg: #ffffff;
+}
+
+:root[data-theme="dark"] {
+    --reflection-accordion-button-bg: #322435;
+    --reflection-accordion-body-bg: #281f29;
+    --reflection-prompt-bg: #211922;
+}
+
+/* Core reflection content layout. */
 .reflection-block {
     display: grid;
     gap: var(--space-2);
@@ -31,6 +45,7 @@
     font-size: 0.8rem;
 }
 
+/* Customized Bootstrap accordion to match project design language. */
 .reflection-accordion {
     margin-top: var(--space-3);
     border: 1px solid var(--color-border);
@@ -54,7 +69,7 @@
 }
 
 .reflection-accordion .accordion-button {
-    background: #fdf0f6;
+    background: var(--reflection-accordion-button-bg);
     color: var(--color-ink);
     font-weight: 700;
     border: 0;
@@ -69,11 +84,11 @@
 }
 
 .reflection-accordion .accordion-button:focus {
-    box-shadow: 0 0 0 0.2rem rgba(176, 74, 122, 0.25);
+    box-shadow: 0 0 0 0.2rem var(--color-focus-ring);
 }
 
 .reflection-accordion .accordion-body {
-    background: #fffafc;
+    background: var(--reflection-accordion-body-bg);
     padding: var(--space-3);
     border-top: 1px solid var(--color-border);
 }
@@ -93,13 +108,26 @@
     border-bottom-right-radius: var(--radius-md);
 }
 
+/* Prompt detail panel shown inside accordion items. */
 .prompt-panel {
     display: grid;
     gap: var(--space-2);
-    background: #ffffff;
+    background: var(--reflection-prompt-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     padding: var(--space-3);
+}
+
+.reflection-accordion .code-block {
+    margin: 0;
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    background: var(--color-code-bg);
+    color: var(--color-code-text);
+    overflow: auto;
+    max-height: 320px;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .prompt-title {
@@ -125,6 +153,7 @@
     color: var(--color-accent-strong);
 }
 
+/* Two-column comparison layout for larger screens. */
 @media (min-width: 800px) {
     .reflection-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
