@@ -53,7 +53,7 @@ Pages:
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- Bootstrap 5.3.8 (local files, no CDN dependency)
+- Bootstrap 5.3.8 (official CDN)
 
 ## Project Structure
 
@@ -80,10 +80,6 @@ AgileIndividualProject/
     |   `-- quiz-questions.json
     |-- images/
     |   `-- (profile, logos, volunteer photos, UWA logo)
-    `-- libraries/
-        `-- bootstrap-5.3.8-dist/
-            |-- css/bootstrap.min.css
-            `-- js/bootstrap.bundle.min.js
 ```
 
 ## How to Run
@@ -99,4 +95,4 @@ Note:
 
 - README content has been aligned with the current implementation and file structure.
 - Removed references to non-existent files (`ai-reflection.js`, `cv.js`) that were previously listed.
-- Updated Bootstrap path description to match the actual local library directory.
+- Updated Bootstrap setup to use the official CDN across all pages.
