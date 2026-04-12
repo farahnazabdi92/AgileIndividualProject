@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const REWARD_SOURCES = [
     {
       name: "Quotable API",
-      url: "https://api.quotable.io/random?tags=technology",
+      url: "http://api.quotable.io/random?tags=technology",
       parse: (data) => {
         if (data && typeof data.content === "string") {
           return {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Type.fit Quotes",
-      url: "https://type.fit/api/quotes",
+      url: "http://type.fit/api/quotes",
       parse: (data) => {
         if (!Array.isArray(data) || data.length === 0) {
           return null;
